@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reglamento Interno de Trabajo - DISTRILAN SAS</title>
+    <style>
+        /* Estilos de protección y visualización */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            user-select: none; /* Deshabilita la selección de texto */
+            -webkit-user-select: none; /* Safari */
+            -moz-user-select: none; /* Firefox */
+            -ms-user-select: none; /* IE10+ */
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #555;
+            margin-top: 25px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #777;
+            margin-top: 15px;
+        }
+        p, li {
+            text-align: justify;
+        }
+        .modal {
+            display: flex;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .modal-content h2 {
+            color: #cc0000;
+            border-bottom: none;
+        }
+        .modal-content p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .accept-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+        .accept-btn:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        /* Fin de estilos */
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    
+    <!-- Modal de Advertencia Legal -->
+    <div id="legalModal" class="modal">
+        <div class="modal-content">
+            <h2>AVISO LEGAL IMPORTANTE</h2>
+            <p>Este **Reglamento Interno de Trabajo** es de **USO EXCLUSIVO** de la empresa **DISTRILAN SAS** y sus trabajadores.</p>
+            <p>Su publicación, copia, reproducción, distribución o cualquier forma de divulgación a terceros está **TOTALMENTE PROHIBIDA**.</p>
+            <p>La violación a esta disposición constituye una falta grave y puede acarrear **sanciones disciplinarias** y **acciones legales** conforme a la ley colombiana.</p>
+            <button class="accept-btn" onclick="acceptTerms()">ACEPTO Y COMPRENDO</button>
+        </div>
+    </div>
+
+    <div id="content" class="container" style="display:none;">
+        <h1>REGLAMENTO INTERNO DE TRABAJO</h1>
+        <h2>DISTRILAN SAS</h2>
+        
+        <p>---</p>
+
+        <h3>CAPÍTULO I - DISPOSICIONES GENERALES</h3>
+
+        <p><strong>Artículo 1.</strong> El presente reglamento interno de trabajo ha sido elaborado por nosotros, DISTRILAN SAS, sociedad legalmente constituida, identificada con el NIT. 90129571 3-7 y domiciliada en el SEC PANAMERICANA SUR KM 7 CORR CATAMBUCO, municipio de Pasto, departamento de Nariño, en cumplimiento de lo establecido en los artículos 104 y siguientes del Código Sustantivo del Trabajo, la Ley 2466 de 2025 sobre reforma laboral, el Decreto 1072 de 2015 y demás normas laborales vigentes.</p>
+        <p>A las disposiciones contenidas en este reglamento quedamos sometidos tanto nosotros como empresa, como todos nuestros trabajadores que presten sus servicios bajo cualquier modalidad contractual. Este reglamento forma parte integral de los contratos individuales de trabajo celebrados o que celebremos con todos nuestros trabajadores, salvo estipulaciones en contrario que únicamente podrán ser más favorables al trabajador, conforme al principio de favorabilidad consagrado en el artículo 21 del Código Sustantivo del Trabajo y el artículo 53 de la Constitución Política de Colombia.</p>
+
+        <h3>CAPÍTULO II - CONDICIONES DE ADMISIÓN</h3>
+
+        <p><strong>Artículo 2. Documentación requerida:</strong> Quien aspire a desempeñar un cargo en DISTRILAN SAS debe cumplir con el proceso de selección que hemos establecido, el cual incluye el diligenciamiento completo del formato de hoja de vida institucional y la presentación de los siguientes documentos, conforme a lo establecido en el artículo 57 del Código Sustantivo del Trabajo y la Ley 1581 de 2012 sobre protección de datos personales.</p>
+        <p>La documentación que solicitamos comprende la hoja de vida debidamente diligenciada con información veraz y actualizada, acompañada de la acreditación de estudios realizados con sus respectivos soportes académicos debidamente autenticados.</p>
+        <p>Requerimos igualmente la presentación de la cédula de ciudadanía vigente como documento de identificación principal.</p>
+        <p>Para aquellos cargos que por su naturaleza requieran el manejo de nuestros vehículos, será indispensable presentar la licencia de conducción vigente y apropiada para la categoría de vehículo que deberá operar.</p>
+        <p>Cuando el cargo a desempeñar requiera el ejercicio de una profesión regulada, deberá presentarse la tarjeta profesional correspondiente o el documento que acredite la autorización legal para ejercer la profesión.</p>
+        <p>Los aspirantes que hayan tenido experiencia laboral previa deberán presentar certificación del último empleador donde hayan trabajado, especificando el tiempo de servicio, el cargo desempeñado, salvo en el caso de quienes se vinculen por primera vez al mercado laboral.</p>
+        <p>Adicionalmente, solicitaremos los certificados laborales adicionales que sean necesarios según las características específicas del cargo a desempeñar.</p>
+        <p><strong>Verificación de documentos:</strong> En DISTRILAN SAS nos reservamos el derecho de verificar la autenticidad y veracidad de toda la documentación presentada, y cualquier falsedad o alteración será causal de rechazo de la solicitud o terminación del contrato si ya se hubiere iniciado la relación laboral.</p>
+
+        <p><strong>Artículo 3. Trabajadores Migrantes</strong> En DISTRILAN SAS podremos contratar trabajadores migrantes en estricto cumplimiento de lo establecido en la Ley 2466 de 2025 sobre reforma laboral, la Ley 1565 de 2012 por la cual se dictan disposiciones y se fijan incentivos para el retorno de los colombianos residentes en el extranjero, el Decreto 1067 de 2015 sobre migración y demás normas aplicables en materia migratoria y laboral.</p>
+
+        <p><strong>Derechos de los trabajadores migrantes:</strong> Estos trabajadores migrantes gozarán de los mismos derechos y estarán sujetos a los mismos deberes que nuestros trabajadores nacionales, sin discriminación alguna por razón de su nacionalidad u origen, en cuanto a:</p>
+        <ul>
+            <li>Salario y todas las formas de remuneración</li>
+            <li>Prestaciones sociales legales y extralegales</li>
+            <li>Afiliación obligatoria al sistema de seguridad social integral incluyendo salud, pensiones y riesgos laborales</li>
+            <li>Condiciones de trabajo dignas y justas que respeten su dignidad humana</li>
+            <li>Acceso a capacitación y desarrollo profesional</li>
+            <li>Protección contra toda forma de discriminación, acoso o maltrato</li>
+        </ul>
+
+        <p><strong>Garantías especiales:</strong> En DISTRILAN SAS garantizaremos que los trabajadores migrantes reciban información clara y completa sobre sus derechos y obligaciones laborales, así como sobre nuestros procedimientos internos, en un idioma que puedan comprender adecuadamente.</p>
+
+        <h3>PERÍODO DE PRUEBA</h3>
+
+        <p><strong>Artículo 4.</strong> En DISTRILAN SAS, una vez admitido el aspirante mediante la suscripción del respectivo contrato de trabajo, podremos estipular con él un único período de prueba inicial que tendrá por objeto apreciar, por nuestra parte, las aptitudes, competencias, habilidades y adaptación del trabajador al cargo y al ambiente laboral, y por parte del trabajador, las conveniencias de las condiciones de trabajo que ofrecemos, nuestra cultura organizacional y las perspectivas de desarrollo profesional dentro de nuestra empresa, conforme a lo establecido en el artículo 76 del Código Sustantivo del Trabajo y los principios constitucionales del trabajo.</p>
+        <p>Este período constituye una etapa de evaluación mutua que nos permite a ambas partes conocernos y determinar la conveniencia de continuar con la relación laboral de manera definitiva.</p>
+
+        <p><strong>Artículo 5.</strong> El período de prueba debe ser estipulado expresamente y por escrito en el contrato de trabajo, especificando claramente su duración y las condiciones particulares que lo rigen. La omisión de esta estipulación hace presumir que las partes hemos renunciado al período de prueba, conforme a lo establecido en el artículo 77 del Código Sustantivo del Trabajo.</p>
+        <p>Durante la negociación del contrato, ambas partes debemos manifestar expresamente nuestra voluntad de incluir o excluir el período de prueba, y esta decisión debe quedar claramente consignada en el documento contractual.</p>
+
+        <p><strong>Artículo 6.</strong> El período de prueba no puede exceder de:</p>
+        <ul>
+            <li>Dos meses para los contratos a término indefinido</li>
+            <li>Una quinta parte del término inicialmente pactado para los contratos a término fijo inferiores a un año</li>
+            <li>Dos meses para los contratos a término fijo iguales o superiores a un año</li>
+        </ul>
+        <p>Esto conforme a lo establecido en el artículo 76 del Código Sustantivo del Trabajo.</p>
+        <p><strong>Restricción importante:</strong> Cuando entre nosotros como empleador y un trabajador celebremos contratos de trabajo sucesivos, suscribamos renovaciones o prórrogas del contrato inicial, no será válida la estipulación de un nuevo período de prueba, toda vez que las partes ya tuvimos la oportunidad de conocernos y evaluarnos mutuamente durante la primera relación contractual.</p>
+
+        <p><strong>Artículo 7.</strong> Durante el período de prueba, el contrato de trabajo puede darse por terminado unilateralmente en cualquier momento y sin previo aviso por cualquiera de las partes, sin que ello genere obligación de pagar indemnización alguna, conforme a lo establecido en el artículo 78 del Código Sustantivo del Trabajo.</p>
+        <p>Esta facultad de terminación unilateral constituye la característica principal del período de prueba y nos permite tanto a nosotros como empleador como al trabajador evaluar la conveniencia de continuar con la relación laboral.</p>
+        <p><strong>Limitación importante:</strong> La terminación del contrato durante el período de prueba debe obedecer a razones objetivas relacionadas con la evaluación de aptitudes o conveniencias laborales, y no puede estar motivada por razones discriminatorias o violatorias de derechos fundamentales.</p>
+
+        <p><strong>Artículo 8.</strong> Durante el período de prueba, el trabajador tiene derecho al pago completo de su salario conforme a lo pactado en el contrato, así como a la afiliación inmediata y el pago oportuno de todos los aportes al sistema de seguridad social integral incluyendo salud, pensiones y riesgos laborales, y al reconocimiento y pago proporcional de todas las prestaciones sociales legales según corresponda a su salario y el tiempo efectivamente laborado, conforme a los artículos 249, 306 y concordantes del Código Sustantivo del Trabajo.</p>
+        <p><strong>Garantía fundamental:</strong> El período de prueba no disminuye ni afecta los derechos laborales del trabajador, quien goza de las mismas garantías y protecciones que cualquier otro trabajador de nuestra empresa.</p>
+        <p><strong>Parágrafo:</strong> El trabajador podrá renunciar en cualquier momento durante el período de prueba, dando preaviso de treinta días calendario para que nosotros podamos proveer adecuadamente su reemplazo, conforme a lo establecido en la Ley 2466 de 2025 sobre reforma laboral.</p>
+        <p>El incumplimiento de esta obligación de preaviso no genera sanción disciplinaria directa contra el trabajador, sin embargo se aclara expresamente que si el trabajador incumple esta obligación de preaviso y con ello nos causa perjuicios económicos, operativos o comerciales demostrados, nosotros podremos iniciar las acciones legales pertinentes ante el Ministerio de Trabajo, los inspectores de trabajo o ante cualquier autoridad judicial competente, garantizando siempre el respeto al debido proceso constitucional y legal y el cumplimiento estricto de la normativa laboral vigente.</p>
+        <p>Dichas acciones legales tendrán por objeto específico determinar si existió dolo, culpa grave o intencionalidad deliberada en la conducta del trabajador al incumplir el preaviso, cuantificar objetivamente el daño económico que nos haya ocasionado, y obtener la restitución proporcional de nuestros derechos que hayan sido afectados por dicho incumplimiento.</p>
+
+        <h3>CONTRATO DE APRENDIZAJE</h3>
+
+        <p><strong>Artículo 9.</strong> El contrato de aprendizaje es una forma especial de vinculación dentro del Derecho Laboral, de naturaleza laboral especial y celebrado a término fijo, que se rige por las normas sustantivas del Código Sustantivo del Trabajo, el Decreto 1072 de 2015 en su Título 6 sobre el Sistema Nacional de Aprendizaje, la Ley 789 de 2002 y demás normas concordantes.</p>
+        <p>Mediante esta modalidad contractual, una persona natural desarrolla formación teórica y práctica en una entidad de formación autorizada por el Estado, a cambio de que nosotros como empresa patrocinadora proporcionemos los medios técnicos, tecnológicos, financieros y logísticos necesarios para que el aprendiz adquiera formación profesional metódica, completa y actualizada requerida en el oficio, actividad, ocupación o profesión específica.</p>
+        <p>Esta formación implica que el aprendiz se desempeñe dentro del manejo administrativo, operativo, comercial, técnico o financiero propios del giro ordinario de nuestras actividades empresariales, por un tiempo determinado no superior a tres años, recibiendo a cambio un apoyo de sostenimiento mensual que garantice su proceso formativo, conforme a lo establecido en el artículo 2.2.6.3.1 del Decreto 1072 de 2015.</p>
+
+        <p><strong>Elementos particulares y especiales del contrato de aprendizaje:</strong> Son elementos particulares y especiales del contrato de aprendizaje que lo diferencian de otras modalidades contractuales los siguientes:</p>
+        <ul>
+            <li>La finalidad específica y exclusiva es la de facilitar la formación integral en las ocupaciones, oficios, actividades y profesiones a las que se refiere el presente artículo, con un enfoque de desarrollo de competencias laborales específicas.</li>
+            <li>La subordinación jurídica está referida exclusivamente a las actividades propias del proceso de aprendizaje y formación, sin extenderse a otras actividades ajenas al objeto formativo del contrato.</li>
+            <li>La formación se recibe a título estrictamente personal e intransferible, no pudiendo el aprendiz delegar o transferir su posición contractual a terceras personas.</li>
+            <li>El apoyo de sostenimiento mensual tiene como finalidad específica garantizar económicamente el proceso de aprendizaje del beneficiario, permitiéndole dedicarse adecuadamente a su formación.</li>
+        </ul>
+
+        <p><strong>Cálculo del apoyo de sostenimiento:</strong></p>
+        <ul>
+            <li><strong>Fase Lectiva:</strong> El apoyo de sostenimiento mensual será equivalente al 50% de un salario mínimo legal mensual vigente (SMLMV).</li>
+            <li><strong>Fase Productiva:</strong> El apoyo de sostenimiento mensual será equivalente al 75% de un salario mínimo legal mensual vigente (SMLMV).</li>
+        </ul>
+
+        <p><strong>Parágrafo 1:</strong> El apoyo de sostenimiento podrá ser del 100% del SMLMV si la tasa de desempleo nacional es inferior al 10% y la empresa cuenta con más de 15 trabajadores.</p>
+        <p><strong>Parágrafo 2:</strong> El apoyo de sostenimiento no constituye salario para ningún efecto legal.</p>
+
+        <p><strong>Artículo 10. Afiliación a seguridad social:</strong> El aprendiz estará afiliado al Sistema de Seguridad Social en Salud y Riesgos Laborales.</p>
+        <ul>
+            <li><strong>Fase Lectiva:</strong> La afiliación a salud se hará como cotizante y la cotización a ARP se hará sobre la base de un SMLMV.</li>
+            <li><strong>Fase Productiva:</strong> La afiliación a salud y riesgos laborales se hará sobre la base de un SMLMV.</li>
+        </ul>
+
+        <p><strong>Artículo 11. Terminación:</strong> El contrato de aprendizaje podrá ser terminado por:</p>
+        <ul>
+            <li>Mutuo acuerdo.</li>
+            <li>Vencimiento del plazo.</li>
+            <li>Incumplimiento de las obligaciones del aprendiz.</li>
+            <li>Cancelación de la matrícula por el centro de formación.</li>
+            <li>Incumplimiento de las obligaciones de la empresa.</li>
+        </ul>
+
+        <h3>CAPÍTULO III - TRABAJADORES ACCIDENTALES O TRANSITORIOS</h3>
+
+        <p><strong>Artículo 12.</strong> Son trabajadores accidentales o transitorios aquellos cuya labor sea de corta duración y no exceda de un mes, y cuyas funciones sean distintas de las actividades normales de nuestra empresa. Estos trabajadores tienen derecho, además del salario, únicamente al auxilio de cesantía y al descanso remunerado en domingos y festivos.</p>
+
+        <h3>CAPÍTULO IV - CONTRATO DE TRABAJO EN CASA Y TELETRABAJO</h3>
+
+        <p><strong>Artículo 13. Trabajo en Casa:</strong> Es la modalidad de prestación del servicio en la cual el trabajador desempeña sus funciones desde su domicilio o lugar de residencia, utilizando las tecnologías de la información y comunicación (TIC) o cualquier otro medio, por un período de tiempo limitado, sin modificar la naturaleza de la relación laboral.</p>
+        <p><strong>Artículo 14. Teletrabajo:</strong> Es una forma de organización laboral que se efectúa en el marco de un contrato de trabajo, en el cual el trabajador utiliza como soporte las tecnologías de la información y las comunicaciones (TIC) para el contacto entre él y la empresa, sin requerir su presencia física en un sitio específico de trabajo.</p>
+        <p><strong>Artículo 15. Derechos y obligaciones:</strong> Los trabajadores bajo estas modalidades gozan de los mismos derechos y garantías que los demás trabajadores de DISTRILAN SAS, incluyendo jornada laboral, horas extras, prestaciones sociales, seguridad social y derecho a la desconexión laboral.</p>
+
+        <h3>CAPÍTULO V - JORNADA DE TRABAJO</h3>
+
+        <p><strong>Artículo 16. Jornada ordinaria:</strong> La jornada ordinaria de trabajo en DISTRILAN SAS es de cuarenta y dos (42) horas semanales, conforme a la Ley 2101 de 2021 y la Ley 2466 de 2025.</p>
+        <p><strong>Artículo 17. Distribución:</strong> Las cuarenta y dos (42) horas semanales podrán ser distribuidas en 5 o 6 días a la semana, garantizando siempre dos días de descanso consecutivos o no, y sin exceder de 9 horas diarias.</p>
+        <p><strong>Artículo 18. Trabajo suplementario:</strong> El trabajo suplementario o de horas extras no podrá exceder de 2 horas diarias y 12 horas semanales.</p>
+
+        <h3>CAPÍTULO VI - TRABAJO DOMINICAL Y FESTIVO</h3>
+
+        <p><strong>Artículo 19.</strong> El trabajo en domingo o días de fiesta se remunerará con un recargo del 75% sobre el salario ordinario, además del salario ordinario a que tiene derecho el trabajador por haber laborado.</p>
+        <p><strong>Artículo 20. Descanso compensatorio:</strong> El trabajador que labore habitualmente en día de descanso obligatorio tiene derecho a un descanso compensatorio remunerado.</p>
+
+        <h3>CAPÍTULO VII - VACACIONES REMUNERADAS</h3>
+
+        <p><strong>Artículo 21.</strong> Los trabajadores que hubieren prestado sus servicios durante un año tienen derecho a quince (15) días hábiles consecutivos de descanso remunerado.</p>
+        <p><strong>Artículo 22. Compensación en dinero:</strong> La compensación de vacaciones en dinero solo está permitida hasta por la mitad de las vacaciones, y únicamente si el trabajador así lo solicita por escrito.</p>
+
+        <h3>CAPÍTULO VIII - PERMISOS Y LICENCIAS</h3>
+
+        <p><strong>Artículo 23.</strong> La empresa concederá a sus trabajadores los siguientes permisos y licencias remuneradas:</p>
+        <ul>
+            <li><strong>Luto:</strong> 5 días hábiles por el fallecimiento de cónyuge, compañero(a) permanente, o parientes hasta el segundo grado de consanguinidad, primero de afinidad y segundo civil.</li>
+            <li><strong>Grave calamidad doméstica:</strong> El tiempo necesario, cuya duración será determinada por la empresa.</li>
+            <li><strong>Matrimonio:</strong> 5 días hábiles.</li>
+            <li><strong>Licencia de Paternidad:</strong> 8 semanas remuneradas, conforme a la Ley 2114 de 2021.</li>
+            <li><strong>Licencia de Maternidad:</strong> 18 semanas remuneradas, conforme a la Ley 1822 de 2017.</li>
+            <li><strong>Cita médica:</strong> El tiempo necesario para asistir a citas médicas, siempre que sean programadas y se presente la debida justificación.</li>
+        </ul>
+
+        <h3>CAPÍTULO IX - SALARIO</h3>
+
+        <p><strong>Artículo 24.</strong> El salario se estipulará libremente, pero no podrá ser inferior al mínimo legal vigente.</p>
+        <p><strong>Artículo 25. Forma y período de pago:</strong> El salario se pagará por períodos de tiempo iguales, que no excederán de un mes, y se pagará en el lugar de trabajo durante las horas de la jornada laboral.</p>
+
+        <h3>CAPÍTULO X - SERVICIO MÉDICO Y RIESGOS LABORALES</h3>
+
+        <p><strong>Artículo 26.</strong> La empresa está obligada a afiliar a sus trabajadores al Sistema de Seguridad Social Integral (Salud, Pensión y Riesgos Laborales).</p>
+        <p><strong>Artículo 27. Obligaciones del trabajador:</strong> El trabajador debe someterse a los exámenes médicos ordenados por la empresa y la ARL, y cumplir con las normas de salud y seguridad en el trabajo.</p>
+
+        <h3>CAPÍTULO XI - OBLIGACIONES Y PROHIBICIONES</h3>
+
+        <h4>OBLIGACIONES ESPECIALES DEL EMPLEADOR</h4>
+
+        <p><strong>Artículo 28.</strong> Son obligaciones especiales de DISTRILAN SAS, además de las establecidas en el Código Sustantivo del Trabajo:</p>
+        <ul>
+            <li>Pagar la remuneración pactada en las condiciones, períodos y lugares convenidos.</li>
+            <li>Pagar los gastos razonables de regreso del trabajador cuando sea despedido sin justa causa.</li>
+            <li>Conceder al trabajador las licencias necesarias para el ejercicio del sufragio, desempeño de cargos oficiales transitorios y en caso de grave calamidad doméstica.</li>
+            <li>Conservar el puesto a las empleadas que estén disfrutando de los descansos remunerados por lactancia o por licencia de enfermedad motivada en el embarazo o parto.</li>
+            <li>Conceder en forma oportuna a la trabajadora en estado de embarazo la licencia remunerada de dieciocho (18) semanas.</li>
+            <li><strong>Obligaciones especiales con menores de edad:</strong> Garantizar el acceso del trabajador menor de edad a la capacitación laboral y conceder licencia no remunerada cuando la actividad escolar así lo requiera. Afiliarlo al Sistema de Seguridad Social Integral, suministrarle cada cuatro (4) meses en forma gratuita un par de zapatos y un vestido de labor, teniendo en cuenta que la remuneración mensual sea hasta dos veces el salario mínimo vigente.</li>
+            <li>Cumplir este reglamento y mantener el orden, la moralidad y el respeto a las leyes, promoviendo un ambiente laboral digno y respetuoso.</li>
+        </ul>
+
+        <h4>OBLIGACIONES DE LOS TRABAJADORES</h4>
+
+        <p><strong>Artículo 29.</strong> En nuestra empresa, nuestros trabajadores tienen las siguientes obligaciones conforme al artículo 58 del Código Sustantivo del Trabajo:</p>
+        <ul>
+            <li><strong>Ejecución personal del trabajo:</strong> Realizar personalmente la labor en los términos estipulados; observar los preceptos de este reglamento y acatar y cumplir las órdenes e instrucciones que de manera particular le imparta nuestra empresa o nuestros representantes.</li>
+            <li><strong>Confidencialidad y lealtad:</strong> No comunicar a terceros, salvo autorización expresa, las informaciones que tenga sobre su trabajo, especialmente sobre asuntos que sean de naturaleza reservada.</li>
+            <li><strong>Conservación de bienes:</strong> Conservar y restituir en buen estado, salvo el deterioro natural, los instrumentos y útiles que le hayan sido facilitados y las materias primas sobrantes, incluyendo vehículos, equipos de bodega y herramientas de trabajo.</li>
+            <li><strong>Conducta moral y profesional:</strong> Guardar rigurosamente la moral en las relaciones con sus superiores y compañeros.</li>
+            <li><strong>Colaboración y comunicación:</strong> Comunicar oportunamente a nuestra empresa las observaciones que estime conducentes a evitarnos daños y perjuicios. Prestar la colaboración posible en caso de siniestro o riesgo inminente.</li>
+            <li><strong>Cumplimiento de medidas preventivas:</strong> Observar las medidas preventivas higiénicas y usar los elementos de protección personal (EPP) suministrados.</li>
+            <li><strong>Información personal actualizada:</strong> Registrar en nuestras oficinas su domicilio y dirección y dar aviso oportuno de cualquier cambio.</li>
+            <li><strong>Obligación especial para trabajadoras embarazadas:</strong> La trabajadora en estado de embarazo debe empezar a disfrutar la licencia remunerada consagrada en el artículo 236 del Código Sustantivo del Trabajo, al menos una semana antes de la fecha probable del parto.</li>
+        </ul>
+
+        <h4>PROHIBICIONES EN LA EMPRESA (EMPLEADOR)</h4>
+
+        <p><strong>Artículo 30.</strong> En DISTRILAN SAS se prohíbe lo siguiente, conforme al artículo 59 del Código Sustantivo del Trabajo:</p>
+        <ul>
+            <li><strong>Deducciones ilegales:</strong> Deducir, retener o compensar suma alguna del monto de los salarios y prestaciones sin autorización previa escrita del trabajador o sin mandamiento judicial.</li>
+            <li><strong>Obligar a compras:</strong> Obligar en cualquier forma a nuestros trabajadores a comprar mercancías o víveres en almacenes o proveedurías que establezcamos.</li>
+            <li><strong>Exigir dinero:</strong> Exigir o aceptar dinero del trabajador como gratificación para que se le admita en el trabajo.</li>
+            <li><strong>Limitar asociación:</strong> Limitar o presionar en cualquier forma a nuestros trabajadores en el ejercicio de su derecho de asociación sindical.</li>
+            <li><strong>Prohibiciones políticas y religiosas:</strong> Imponer obligaciones de carácter religioso o político, o dificultarles el ejercicio del sufragio. Hacer, autorizar o tolerar propaganda política en los sitios de trabajo.</li>
+            <li><strong>Rifas y colectas:</strong> Hacer o permitir todo género de rifas, colectas o suscripciones en los mismos sitios de trabajo.</li>
+            <li><strong>Listas negras:</strong> Emplear en las certificaciones signos convencionales que tiendan a perjudicar a los interesados, o adoptar el sistema de “lista negra”.</li>
+            <li><strong>Vulnerar dignidad:</strong> Ejecutar o autorizar cualquier acto que vulnere o restrinja los derechos de nuestros trabajadores o que ofenda su dignidad.</li>
+            <li><strong>Cierre intempestivo:</strong> Cerrar intempestivamente nuestra empresa.</li>
+        </ul>
+
+        <h4>PROHIBICIONES PARA LOS TRABAJADORES</h4>
+
+        <p><strong>Artículo 31.</strong> En DISTRILAN SAS se prohíbe a nuestros trabajadores:</p>
+        <ul>
+            <li><strong>Sustracción y mal uso de bienes:</strong> Sustraer de nuestra empresa los útiles de trabajo, las materias primas o productos elaborados sin permiso expreso. Utilizar los útiles, herramientas o equipos suministrados en objetivos distintos del trabajo contratado. Utilizar los vehículos de nuestra empresa para realizar diligencias personales o transportar personas particulares sin autorización. Vender los elementos de protección personal o la dotación suministrada.</li>
+            <li><strong>Confidencialidad e información:</strong> Divulgar, sustraer, compartir o hacer uso inadecuado de toda la información de DISTRILAN SAS.</li>
+            <li><strong>Sustancias psicoactivas y alcohol:</strong> Presentarse al trabajo en estado de embriaguez o bajo la influencia de narcóticos. Consumir, portar o distribuir bebidas alcohólicas o sustancias psicoactivas dentro de nuestras instalaciones.</li>
+            <li><strong>Seguridad y protección:</strong> No cumplir con los protocolos de seguridad establecidos. Conservar armas de cualquier clase en el sitio de trabajo (excepto celadores). Realizar actividades inseguras.</li>
+            <li><strong>Asistencia y puntualidad:</strong> Faltar al trabajo sin justa causa o permiso. Llegar tarde incumpliendo el horario. Ausentarse dentro de la jornada laboral sin permiso. Quedarse dentro de nuestras instalaciones fuera del horario laboral sin justa causa.</li>
+            <li><strong>Conducta y disciplina:</strong> Hacer colectas, rifas o suscripciones. Hacer negocios propios relacionados con la actividad económica de nuestra empresa. Realizar trabajos alternos de manera particular dentro de la jornada laboral. Tener conductas inapropiadas portando el uniforme. Realizar acoso laboral.</li>
+        </ul>
+
+        <h3>CAPÍTULO XII - ESCALA DE FALTAS Y SANCIONES DISCIPLINARIAS</h3>
+
+        <p><strong>Artículo 32. Clasificación:</strong> Establecemos la siguiente clasificación de faltas disciplinarias y sus correspondientes sanciones, aplicando el principio de proporcionalidad y garantizando el debido proceso:</p>
+
+        <h4>FALTAS LEVES</h4>
+
+        <p><strong>Artículo 33. Definición y Sanciones:</strong> Son aquellas conductas que alteran el orden y la disciplina laboral sin causar perjuicio grave.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Falta Leve</th>
+                    <th>1ª Vez</th>
+                    <th>2ª Vez</th>
+                    <th>3ª Vez</th>
+                    <th>4ª Vez</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Retrasos (hasta 15 min)</strong></td>
+                    <td>Llamado verbal</td>
+                    <td>Llamado escrito</td>
+                    <td>Descuento 2h</td>
+                    <td>Descuento 1/2 día</td>
+                </tr>
+                <tr>
+                    <td><strong>Pérdidas Económicas Menores (hasta $20k)</strong></td>
+                    <td>Llamado escrito + Reposición</td>
+                    <td>Descuento 4h + Reposición</td>
+                    <td>Descuento 1 día + Reposición</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td><strong>Otras Faltas Leves</strong></td>
+                    <td>Llamado verbal</td>
+                    <td>Llamado escrito</td>
+                    <td>Descuento 4h</td>
+                    <td>N/A</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>FALTAS GRAVES</h4>
+
+        <p><strong>Artículo 34. Definición y Sanciones:</strong> Son aquellas conductas que afectan significativamente el normal desarrollo de las actividades, causan perjuicio considerable o ponen en riesgo la seguridad.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Falta Grave</th>
+                    <th>1ª Vez</th>
+                    <th>2ª Vez</th>
+                    <th>3ª Vez</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Retrasos (hasta 30 min o que afecten 10% operaciones)</strong></td>
+                    <td>Suspensión 1 día</td>
+                    <td>Suspensión 3 días</td>
+                    <td>Suspensión 5 días</td>
+                </tr>
+                <tr>
+                    <td><strong>Pérdidas Económicas Considerables ($20k - $50k)</strong></td>
+                    <td>Suspensión 2 días + Reposición</td>
+                    <td>Suspensión 5 días + Reposición</td>
+                    <td>Suspensión 8 días + Reposición</td>
+                </tr>
+                <tr>
+                    <td><strong>Inasistencia Injustificada (1 día)</strong></td>
+                    <td>Suspensión 1 día</td>
+                    <td>Suspensión 3 días</td>
+                    <td>Suspensión 5 días</td>
+                </tr>
+                <tr>
+                    <td><strong>Incumplimiento de Seguridad (No uso EPP, etc.)</strong></td>
+                    <td>Suspensión 1-3 días</td>
+                    <td>Suspensión 3-5 días</td>
+                    <td>Suspensión 5-8 días</td>
+                </tr>
+                <tr>
+                    <td><strong>Otras Faltas Graves (Divulgar info no crítica, etc.)</strong></td>
+                    <td>Suspensión 1-3 días</td>
+                    <td>Suspensión 3-5 días</td>
+                    <td>Suspensión 5-8 días</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h4>FALTAS GRAVÍSIMAS</h4>
+
+        <p><strong>Artículo 35. Definición y Sanciones:</strong> Son aquellas conductas que atentan gravemente contra la disciplina, la seguridad, la moral, los bienes de la empresa o constituyen justa causa para la terminación del contrato.</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Falta Gravísima</th>
+                    <th>1ª Vez</th>
+                    <th>Reincidencia o Gravedad Extrema</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Inasistencia Crítica</strong></td>
+                    <td>Suspensión 8-15 días</td>
+                    <td>Terminación del contrato</td>
+                </tr>
+                <tr>
+                    <td><strong>Pérdidas Económicas Graves (>$50k)</strong></td>
+                    <td>Suspensión 8-15 días + Reposición + Proceso</td>
+                    <td>Terminación del contrato</td>
+                </tr>
+                <tr>
+                    <td><strong>Sustancias Psicoactivas/Alcohol</strong></td>
+                    <td>Suspensión 8-15 días</td>
+                    <td>Terminación del contrato</td>
+                </tr>
+                <tr>
+                    <td><strong>Violencia y Agresión / Acoso</strong></td>
+                    <td>Suspensión 8-15 días</td>
+                    <td>Terminación del contrato</td>
+                </tr>
+                <tr>
+                    <td><strong>Sustracción y Fraude / Falsificación</strong></td>
+                    <td>Suspensión 8-15 días</td>
+                    <td>Terminación del contrato</td>
+                </tr>
+                <tr>
+                    <td><strong>Violación de Confidencialidad Crítica</strong></td>
+                    <td>Suspensión 8-15 días</td>
+                    <td>Terminación del contrato</td>
+                </tr>
+                <tr>
+                    <td><strong>Seguridad Crítica (Conducir bajo efectos, etc.)</strong></td>
+                    <td>Suspensión 8-15 días</td>
+                    <td>Terminación del contrato</td>
+                </tr>
+                <tr>
+                    <td><strong>Otras Faltas Gravísimas</strong></td>
+                    <td>Suspensión 8-15 días</td>
+                    <td>Terminación del contrato</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Artículo 36. FALTAS ESPECÍFICAS PARA DISTRIBUCIÓN DE ALIMENTOS</strong></p>
+        <ul>
+            <li><strong>Leves:</strong> Incumplir horarios de carga/descarga, no reportar anomalías menores.</li>
+            <li><strong>Graves:</strong> Romper la cadena de frío por negligencia, entregar productos en lugares no autorizados, incumplir rutas, daños menores a vehículos.</li>
+            <li><strong>Gravísimas:</strong> Contaminar productos alimenticios, vender o desviar productos, causar intoxicación alimentaria, accidentes graves con vehículos por imprudencia o violación de normas de tránsito.</li>
+        </ul>
+
+        <p><strong>Artículo 37. Aplicación de Sanciones y Descuentos:</strong> Se descontará el tiempo dejado de trabajar por sanción. El pago de seguridad social se hace total, descontando al empleado su parte. Se descontarán de la misma manera el pago de todas las prestaciones sociales de acuerdo a los días descontados por la sanción aplicada.</p>
+
+        <h3>CAPÍTULO XIII - PROCEDIMIENTOS DISCIPLINARIOS</h3>
+
+        <p><strong>Artículo 38. Proceso Sancionatorio Simplificado (Menos de 10 trabajadores):</strong></p>
+        <ol>
+            <li>Comunicación de apertura.</li>
+            <li>Formulación de cargos por escrito.</li>
+            <li>Traslado de pruebas.</li>
+            <li>Término para descargos: Mínimo 2 días hábiles.</li>
+            <li>Decisión final motivada.</li>
+            <li>Imposición de sanción.</li>
+            <li>Derecho de impugnación.</li>
+        </ol>
+
+        <p><strong>Artículo 39. Proceso Sancionatorio de Doble Instancia (Más de 10 trabajadores):</strong></p>
+        <ol>
+            <li>Comunicación de apertura.</li>
+            <li>Formulación de cargos detallada.</li>
+            <li>Traslado de pruebas completo.</li>
+            <li>Término para descargos: Mínimo 5 días hábiles.</li>
+            <li>Decisión de primera instancia.</li>
+            <li>Derecho de apelación.</li>
+            <li>Decisión final en segunda instancia.</li>
+        </ol>
+
+        <p><strong>Artículo 40. Garantías del Debido Proceso:</strong> Se aplicarán los principios de Dignidad humana, Presunción de inocencia, Proporcionalidad, Derecho a la defensa, entre otros.</p>
+
+        <h3>CAPÍTULO XIV - RECLAMOS: PERSONAS ANTE QUIENES DEBEN PRESENTARSE Y SU TRAMITACIÓN</h3>
+
+        <p><strong>Artículo 41. Instancias para Presentar Reclamos:</strong></p>
+        <ul>
+            <li>Gerente General.</li>
+            <li>Comité de Convivencia Laboral.</li>
+        </ul>
+
+        <p><strong>Artículo 42. Procedimiento de Tramitación:</strong></p>
+        <ul>
+            <li>Recepción: Dentro de 2 días hábiles.</li>
+            <li>Respuesta: Por escrito en un término no mayor a 15 días hábiles.</li>
+            <li>Garantías: Confidencialidad y no represalias.</li>
+        </ul>
+
+        <h3>CAPÍTULO XV - MECANISMOS DE PREVENCIÓN DEL ACOSO LABORAL</h3>
+
+        <p><strong>Artículo 43. Definición de Acoso Laboral:</strong> Toda conducta persistente y demostrable, ejercida sobre un trabajador, encaminada a infundir miedo, intimidación, terror y angustia, a causar perjuicio laboral, generar desmotivación o inducir la renuncia.</p>
+
+        <p><strong>Artículo 44. Modalidades de Acoso Laboral:</strong> Maltrato Laboral, Persecución Laboral, Discriminación Laboral, Entorpecimiento Laboral, Inequidad Laboral, Desprotección Laboral.</p>
+
+        <p><strong>Artículo 45. Conductas que Constituyen Acoso Laboral (Presunción):</strong> Actos de agresión física, expresiones injuriosas, amenazas de despido, descalificación humillante, imposición de deberes extraños, exigencia de labor en horarios excesivos, trato discriminatorio, negativa de materiales o permisos, mensajes intimidatorios (acoso tecnológico).</p>
+
+        <p><strong>Artículo 46. Conductas que NO Constituyen Acoso Laboral:</strong> Ejercicio de autoridad (potestad disciplinaria), exigencias razonables de fidelidad, evaluación laboral, solicitud de colaboración extraordinaria, actuaciones legales para terminación de contrato, exigencia de cumplimiento contractual.</p>
+
+        <p><strong>Artículo 47. Comité de Convivencia Laboral:</strong> Instancia con rol preventivo, orientador y conciliador.</p>
+
+        <p><strong>Artículo 48. Conformación del Comité:</strong> Número igual de representantes del empleador y de los trabajadores, con período de dos (2) años.</p>
+
+        <p><strong>Artículo 49. Procedimiento del Comité:</strong> Recepción, análisis confidencial, audiencias individuales, espacio de diálogo y acuerdos, seguimiento a compromisos, cierre o remisión a la alta dirección. El procedimiento no podrá exceder los 65 días calendario.</p>
+
+        <p><strong>Artículo 50. Casos de Acoso Sexual y Violencia de Género:</strong> Excluidos de la competencia del Comité de Convivencia Laboral (no conciliables). Se establece un procedimiento interno específico a través de Talento Humano.</p>
+
+        <p><strong>Artículo 51. Política de Inclusión Laboral y Ajustes Razonables:</strong> Compromiso con un entorno laboral inclusivo, implementación de ajustes razonables, prohibición de discriminación por orientación sexual o identidad de género.</p>
+
+        <p><strong>Artículo 52. Política de Prevención de Acoso Sexual Laboral:</strong> Definición de acoso sexual (Ley 2365 de 2024), manifestaciones (comentarios, contacto físico no deseado, etc.), procedimiento de denuncia confidencial, garantías de no represalias y sanciones (terminación del contrato, remisión a autoridades).</p>
+
+        <h3>CAPÍTULO XVI - POLÍTICA DE DESCONEXIÓN LABORAL</h3>
+
+        <p><strong>Artículo 53. Objeto:</strong> Garantizar el derecho a la desconexión laboral (Ley 2191 de 2022), asegurando el respeto de los tiempos de descanso y vida personal.</p>
+
+        <p><strong>Artículo 54. Lineamientos:</strong> No obligatoriedad de atender comunicaciones fuera de la jornada, abstención de superiores de impartir órdenes fuera de la jornada.</p>
+
+        <p><strong>Artículo 55. Excepciones:</strong> Fuerza mayor, cargos de dirección, confianza y manejo, acuerdos específicos de disponibilidad.</p>
+
+        <p><strong>Artículo 56. Mecanismos de Reporte:</strong> Quejas o reportes ante el área de Talento Humano.</p>
+
+        <h3>CAPÍTULO XVII - PUBLICACIONES</h3>
+
+        <p><strong>Artículo 57.</strong> Publicaremos en cartelera y en medio digital (WhatsApp, link, QR).</p>
+
+        <p><strong>Artículo 58. Canales Oficiales de Comunicación y Validez Legal:</strong></p>
+        <ul>
+            <li><strong>Oficiales:</strong> Correos Electrónicos Institucionales, Teléfonos y WhatsApp Institucionales, Medios Escritos, Carteleras.</li>
+            <li><strong>Informativos/Personales:</strong> Correos Electrónicos Personales, Número de Contacto Personal.</li>
+            <li><strong>Validez Legal:</strong> Toda comunicación por correo o WhatsApp institucional se considera Mensaje de Datos con plena validez jurídica (Ley 527 de 1999).</li>
+        </ul>
+
+        <p><strong>Artículo 59.</strong> Publicaremos el reglamento en dos (2) copias de caracteres legibles, en dos (2) sitios distintos y en medio electrónico.</p>
+
+        <h3>CAPÍTULO XVIII - VIGENCIA Y DISPOSICIONES FINALES</h3>
+
+        <p><strong>Artículo 60. Vigencia:</strong> El presente reglamento entrará a regir desde su publicación.</p>
+
+        <p><strong>Artículo 61. Disposiciones Finales:</strong> Quedan sin efecto las disposiciones del Reglamento anterior.</p>
+        
+        <p>---</p>
+        <p style="text-align: center; font-style: italic;">Documento elaborado conforme a la Ley 1010 de 2006, Ley 2365 de 2024, Ley 2191 de 2022, Ley 2466 de 2025, Código Sustantivo del Trabajo y demás normatividad laboral colombiana vigente.</p>
+        <p style="text-align: center; font-style: italic;">Pasto, noviembre de 2025</p>
+        <p style="text-align: center; font-weight: bold;">GERMAN BOLAÑOS DELGADO</p>
+        <p style="text-align: center;">DISTRILAN SAS</p>
+    </div>
+
+    <script>
+        // Funciones de protección
+        document.addEventListener('keydown', function(e) {
+            // Bloquea Ctrl+P (Imprimir)
+            if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                e.preventDefault();
+            }
+            // Bloquea F12 (DevTools)
+            if (e.key === 'F12') {
+                e.preventDefault();
+            }
+            // Bloquea Ctrl+Shift+I (DevTools)
+            if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'I') {
+                e.preventDefault();
+            }
+        });
+
+        // Función para aceptar términos y mostrar contenido
+        function acceptTerms() {
+            document.getElementById('legalModal').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
