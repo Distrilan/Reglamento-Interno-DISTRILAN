@@ -3,189 +3,836 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reglamento Interno de Trabajo - Fragmento 4 (Final)</title>
+    <title>REGLAMENTO INTERNO DE TRABAJO - DISTRILAN SAS</title>
     <style>
+        /* Estilos Generales */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #fff;
-            padding: 30px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #3498db;
-            margin-top: 30px;
-            border-left: 4px solid #3498db;
-            padding-left: 10px;
-        }
-        h3 {
-            color: #2c3e50;
-            margin-top: 20px;
-            padding-left: 10px;
-        }
-        h4 {
-            color: #2c3e50;
-            margin-top: 15px;
-            padding-left: 10px;
-            font-size: 1.1em;
-        }
-        p {
             line-height: 1.6;
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-        .articulo {
-            margin-bottom: 20px;
-            padding: 15px;
-            border: 1px solid #ecf0f1;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        .articulo strong {
-            display: block;
-            margin-bottom: 5px;
-            color: #2c3e50;
-        }
-        ul, ol {
             margin: 0;
-            padding-left: 20px;
+            color: #333;
+            background-color: #f4f4f4;
+            /* Deshabilitar selección de texto */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
-        li {
-            margin-bottom: 5px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 15px 0;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #3498db;
-            color: white;
-        }
-        .firma {
-            margin-top: 50px;
-            text-align: center;
-        }
-        .firma hr {
-            width: 50%;
-            margin: 5px auto;
-            border: 0;
-            border-top: 1px solid #333;
-        }
-        /* Estilos para el Aviso Legal */
+        
+        /* Estilos del Aviso Legal */
         #aviso-legal {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.95);
+            background-color: rgba(0, 0, 0, 0.9);
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 1000;
             text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
+            z-index: 1000;
         }
-        #aviso-legal-box {
-            background-color: #c0392b; /* Rojo para advertencia */
+        .aviso-content {
+            background-color: #0056b3;
             padding: 40px;
             border-radius: 10px;
             max-width: 600px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
-        #aviso-legal h3 {
-            color: #f1c40f;
-            font-size: 1.8em;
-            margin-bottom: 20px;
+        .aviso-content h2 {
+            margin-top: 0;
+            font-size: 2em;
+            border-bottom: 2px solid white;
+            padding-bottom: 10px;
         }
-        #aviso-legal p {
+        .aviso-content p {
             font-size: 1.1em;
-            margin-bottom: 30px;
-            line-height: 1.8;
+            margin: 20px 0;
         }
-        #btn-aceptar {
-            background-color: #27ae60;
+        #aceptar-btn {
+            background-color: #28a745;
             color: white;
             border: none;
-            padding: 12px 25px;
-            font-size: 1.1em;
-            cursor: pointer;
+            padding: 15px 30px;
+            font-size: 1.2em;
             border-radius: 5px;
+            cursor: pointer;
             transition: background-color 0.3s;
+            margin-top: 20px;
         }
-        #btn-aceptar:hover {
-            background-color: #2ecc71;
+        #aceptar-btn:hover {
+            background-color: #218838;
         }
 
-        /* Estilos para Bloqueo de Copia y Pantallazos */
-        .contenido-protegido {
-            /* Deshabilita la selección de texto */
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
+        /* Estilos del Contenido Principal (Reglamento) */
+        #contenido-reglamento {
+            display: none; /* Oculto por defecto */
+            padding: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 3px solid #0056b3;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+        }
+        .chapter-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            text-align: center;
+            margin: 40px 0 10px 0;
+            color: #0056b3;
+        }
+        .section-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: 20px 0 10px 0;
+            color: #555;
+        }
+        .article {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid #f0f0f0;
+        }
+        .article-title {
+            font-weight: bold;
+            color: #000;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        .signature {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .signature div {
+            margin-top: 30px;
+            font-weight: bold;
+            border-top: 1px solid #333;
+            display: inline-block;
+            padding-top: 5px;
+        }
+        .footer {
+            margin-top: 50px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            font-size: 0.9em;
+            text-align: center;
+            color: #666;
         }
     </style>
-</head>
-<body class="contenido-protegido">
 
-    <!-- Aviso Legal (Visible por defecto) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const avisoLegal = document.getElementById('aviso-legal');
+            const contenidoReglamento = document.getElementById('contenido-reglamento');
+            const aceptarBtn = document.getElementById('aceptar-btn');
+
+            // Función para mostrar el contenido y ocultar el aviso
+            aceptarBtn.addEventListener('click', function() {
+                avisoLegal.style.display = 'none';
+                contenidoReglamento.style.display = 'block';
+                window.scrollTo(0, 0); // Scroll al inicio
+            });
+
+            // Bloqueo de funciones de copia y captura de pantalla
+            // 1. Bloquear clic derecho (menú contextual)
+            document.addEventListener('contextmenu', function(e) {
+                e.preventDefault();
+            });
+
+            // 2. Bloquear teclas de copia (Ctrl+C, Cmd+C, Ctrl+A, etc.)
+            document.addEventListener('keydown', function(e) {
+                // Bloquear Ctrl+C, Ctrl+X, Ctrl+A, Ctrl+U (view source)
+                if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'x' || e.key === 'a' || e.key === 'u')) {
+                    e.preventDefault();
+                }
+                // Bloquear F12 (Developer Tools)
+                if (e.key === 'F12') {
+                    e.preventDefault();
+                }
+                // Bloquear Print Screen (PrtScn) - No funciona en todos los navegadores/OS
+                if (e.key === 'PrintScreen') {
+                    // Aunque no se puede bloquear la funcionalidad del OS,
+                    // se puede intentar notificar o disuadir.
+                    console.warn("Intento de captura de pantalla detectado.");
+                }
+            });
+
+            // 3. Bloquear arrastrar y soltar (para evitar arrastrar texto)
+            document.addEventListener('dragstart', function(e) {
+                e.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Aviso Legal (Overlay) -->
     <div id="aviso-legal">
-        <div id="aviso-legal-box">
-            <h3>AVISO LEGAL Y CONFIDENCIALIDAD</h3>
-            <p>
-                Este archivo contiene el <strong>REGLAMENTO INTERNO DE TRABAJO</strong> de la empresa <strong>DISTRILAN SAS</strong>.
-            </p>
-            <p>
-                Es de acceso exclusivo para consulta por sus trabajadores o personal interesado en el tema.
-            </p>
-            <p>
-                <strong>ESTÁ ESTRICTAMENTE PROHIBIDA</strong> su copia, publicación, descarga, reproducción o divulgación de manera parcial o total. Quien lo haga se expone a procesos legales y sanciones conforme a la legislación vigente.
-            </p>
-            <button id="btn-aceptar">ACEPTO Y COMPRENDO</button>
+        <div class="aviso-content">
+            <h2>AVISO LEGAL DE CONFIDENCIALIDAD</h2>
+            <p>Este archivo y su contenido son propiedad exclusiva de **DISTRIBUIDORA DE ALIMENTOS DE NARIÑO SAS (DISTRILAN SAS)**.</p>
+            <p>El acceso a este documento está restringido a la consulta interna por parte de sus trabajadores y personal autorizado, o personal interesado en el tema.</p>
+            <p><strong>QUEDA ESTRICTAMENTE PROHIBIDA</strong> su copia, publicación, descarga, reproducción o distribución de manera parcial o total. Cualquier violación de esta prohibición, incluyendo la toma de capturas de pantalla, expone al infractor a los procesos legales y sanciones correspondientes de acuerdo con la legislación vigente.</p>
+            <button id="aceptar-btn">ACEPTO Y COMPRENDO</button>
         </div>
     </div>
 
     <!-- Contenido del Reglamento (Oculto por defecto) -->
-    <div id="contenido" class="container" style="display: none;">
-        <h1>REGLAMENTO INTERNO DE TRABAJO - FRAGMENTO 4 (FINAL)</h1>
-        <p>________________________________________</p>
+    <div id="contenido-reglamento">
+        <div class="header">
+            <h1>REGLAMENTO INTERNO DE TRABAJO</h1>
+            <h2>DISTRIBUIDORA DE ALIMENTOS DE NARIÑO SAS (DISTRILAN SAS)</h2>
+            <hr>
+        </div>
 
-        <h2>CAPÍTULO XIV</h2>
-        <h3>MECANISMOS DE PREVENCIÓN DEL ACOSO LABORAL Y PROCEDIMIENTO INTERNO DE SOLUCIÓN</h3>
-        
-        <h4>1. DEFINICIONES Y MARCO NORMATIVO</h4>
-        <div class="articulo">
-            <strong>Artículo 68.</strong> DEFINICIÓN DE ACOSO LABORAL
+        <div class="chapter-title">CAPÍTULO I</div>
+        <div class="section-title">DISPOSICIONES GENERALES</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 1.</span> El presente reglamento interno de trabajo ha sido elaborado por nosotros, DISTRILAN SAS, sociedad legalmente constituida, identificada con el NIT. 90129571 3-7 y domiciliada en el SEC PANAMERICANA SUR KM 7 CORR CATAMBUCO, municipio de Pasto, departamento de Nariño, en cumplimiento de lo establecido en los artículos 104 y siguientes del Código Sustantivo del Trabajo, la Ley 2466 de 2025 sobre reforma laboral, el Decreto 1072 de 2015 y demás normas laborales vigentes.</p>
+            <p>A las disposiciones contenidas en este reglamento quedamos sometidos tanto nosotros como empresa, como todos nuestros trabajadores que presten sus servicios bajo cualquier modalidad contractual. Este reglamento forma parte integral de los contratos individuales de trabajo celebrados o que celebremos con todos nuestros trabajadores, salvo estipulaciones en contrario que únicamente podrán ser más favorables al trabajador, conforme al principio de favorabilidad consagrado en el artículo 21 del Código Sustantivo del Trabajo y el artículo 53 de la Constitución Política de Colombia.</p>
+        </div>
+
+        <div class="chapter-title">CAPÍTULO II</div>
+        <div class="section-title">CONDICIONES DE ADMISIÓN</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 2.</span> Quien aspire a desempeñar un cargo en DISTRILAN SAS debe cumplir con el proceso de selección que hemos establecido, el cual incluye el diligenciamiento completo del formato de hoja de vida institucional y la presentación de los siguientes documentos, conforme a lo establecido en el artículo 57 del Código Sustantivo del Trabajo y la Ley 1581 de 2012 sobre protección de datos personales.</p>
+            <h3>Documentación requerida:</h3>
+            <p>La documentación que solicitamos comprende la hoja de vida debidamente diligenciada con información veraz y actualizada, acompañada de la acreditación de estudios realizados con sus respectivos soportes académicos debidamente autenticados.</p>
+            <p>Requerimos igualmente la presentación de la cédula de ciudadanía vigente como documento de identificación principal.</p>
+            <p>Para aquellos cargos que por su naturaleza requieran el manejo de nuestros vehículos, será indispensable presentar la licencia de conducción vigente y apropiada para la categoría de vehículo que deberá operar.</p>
+            <p>Cuando el cargo a desempeñar requiera el ejercicio de una profesión regulada, deberá presentarse la tarjeta profesional correspondiente o el documento que acredite la autorización legal para ejercer la profesión.</p>
+            <p>Los aspirantes que hayan tenido experiencia laboral previa deberán presentar certificación del último empleador donde hayan trabajado, especificando el tiempo de servicio, el cargo desempeñado, salvo en el caso de quienes se vinculen por primera vez al mercado laboral.</p>
+            <p>Adicionalmente, solicitaremos los certificados laborales adicionales que sean necesarios según las características específicas del cargo a desempeñar.</p>
+            <h3>Verificación de documentos:</h3>
+            <p>En DISTRILAN SAS nos reservamos el derecho de verificar la autenticidad y veracidad de toda la documentación presentada, y cualquier falsedad o alteración será causal de rechazo de la solicitud o terminación del contrato si ya se hubiere iniciado la relación laboral.</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 3.</span> Trabajadores Migrantes</p>
+            <p>En DISTRILAN SAS podremos contratar trabajadores migrantes en estricto cumplimiento de lo establecido en la Ley 2466 de 2025 sobre reforma laboral, la Ley 1565 de 2012 por la cual se dictan disposiciones y se fijan incentivos para el retorno de los colombianos residentes en el extranjero, el Decreto 1067 de 2015 sobre migración y demás normas aplicables en materia migratoria y laboral.</p>
+            <h3>Derechos de los trabajadores migrantes:</h3>
+            <p>Estos trabajadores migrantes gozarán de los mismos derechos y estarán sujetos a los mismos deberes que nuestros trabajadores nacionales, sin discriminación alguna por razón de su nacionalidad u origen, en cuanto a:</p>
+            <ul>
+                <li>Salario y todas las formas de remuneración</li>
+                <li>Prestaciones sociales legales y extralegales</li>
+                <li>Afiliación obligatoria al sistema de seguridad social integral incluyendo salud, pensiones y riesgos laborales</li>
+                <li>Condiciones de trabajo dignas y justas que respeten su dignidad humana</li>
+                <li>Acceso a capacitación y desarrollo profesional</li>
+                <li>Protección contra toda forma de discriminación, acoso o maltrato</li>
+            </ul>
+            <h3>Garantías especiales:</h3>
+            <p>En DISTRILAN SAS garantizaremos que los trabajadores migrantes reciban información clara y completa sobre sus derechos y obligaciones laborales, así como sobre nuestros procedimientos internos, en un idioma que puedan comprender adecuadamente.</p>
+        </div>
+
+        <div class="section-title">PERÍODO DE PRUEBA</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 4.</span> En DISTRILAN SAS, una vez admitido el aspirante mediante la suscripción del respectivo contrato de trabajo, podremos estipular con él un único período de prueba inicial que tendrá por objeto apreciar, por nuestra parte, las aptitudes, competencias, habilidades y adaptación del trabajador al cargo y al ambiente laboral, y por parte del trabajador, las conveniencias de las condiciones de trabajo que ofrecemos, nuestra cultura organizacional y las perspectivas de desarrollo profesional dentro de nuestra empresa, conforme a lo establecido en el artículo 76 del Código Sustantivo del Trabajo y los principios constitucionales del trabajo.</p>
+            <p>Este período constituye una etapa de evaluación mutua que nos permite a ambas partes conocernos y determinar la conveniencia de continuar con la relación laboral de manera definitiva.</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 5.</span> El período de prueba debe ser estipulado expresamente y por escrito en el contrato de trabajo, especificando claramente su duración y las condiciones particulares que lo rigen. La omisión de esta estipulación hace presumir que las partes hemos renunciado al período de prueba, conforme a lo establecido en el artículo 77 del Código Sustantivo del Trabajo.</p>
+            <p>Durante la negociación del contrato, ambas partes debemos manifestar expresamente nuestra voluntad de incluir o excluir el período de prueba, y esta decisión debe quedar claramente consignada en el documento contractual.</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 6.</span> El período de prueba no puede exceder de:</p>
+            <ul>
+                <li>Dos meses para los contratos a término indefinido</li>
+                <li>Una quinta parte del término inicialmente pactado para los contratos a término fijo inferiores a un año</li>
+                <li>Dos meses para los contratos a término fijo iguales o superiores a un año</li>
+            </ul>
+            <p>Esto conforme a lo establecido en el artículo 76 del Código Sustantivo del Trabajo.</p>
+            <p><span class="article-title">Restricción importante:</span> Cuando entre nosotros como empleador y un trabajador celebremos contratos de trabajo sucesivos, suscribamos renovaciones o prórrogas del contrato inicial, no será válida la estipulación de un nuevo período de prueba, toda vez que las partes ya tuvimos la oportunidad de conocernos y evaluarnos mutuamente durante la primera relación contractual.</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 7.</span> Durante el período de prueba, el contrato de trabajo puede darse por terminado unilateralmente en cualquier momento y sin previo aviso por cualquiera de las partes, sin que ello genere obligación de pagar indemnización alguna, conforme a lo establecido en el artículo 78 del Código Sustantivo del Trabajo.</p>
+            <p>Esta facultad de terminación unilateral constituye la característica principal del período de prueba y nos permite tanto a nosotros como empleador como al trabajador evaluar la conveniencia de continuar con la relación laboral.</p>
+            <p><span class="article-title">Limitación importante:</span> La terminación del contrato durante el período de prueba debe obedecer a razones objetivas relacionadas con la evaluación de aptitudes o conveniencias laborales, y no puede estar motivada por razones discriminatorias o violatorias de derechos fundamentales.</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 8.</span> Durante el período de prueba, el trabajador tiene derecho al pago completo de su salario conforme a lo pactado en el contrato, así como a la afiliación inmediata y el pago oportuno de todos los aportes al sistema de seguridad social integral incluyendo salud, pensiones y riesgos laborales, y al reconocimiento y pago proporcional de todas las prestaciones sociales legales según corresponda a su salario y el tiempo efectivamente laborado, conforme a los artículos 249, 306 y concordantes del Código Sustantivo del Trabajo.</p>
+            <p><span class="article-title">Garantía fundamental:</span> El período de prueba no disminuye ni afecta los derechos laborales del trabajador, quien goza de las mismas garantías y protecciones que cualquier otro trabajador de nuestra empresa.</p>
+            <p><span class="article-title">Parágrafo:</span> El trabajador podrá renunciar en cualquier momento durante el período de prueba, dando preaviso de treinta días calendario para que nosotros podamos proveer adecuadamente su reemplazo, conforme a lo establecido en la Ley 2466 de 2025 sobre reforma laboral.</p>
+            <p>El incumplimiento de esta obligación de preaviso no genera sanción disciplinaria directa contra el trabajador, sin embargo se aclara expresamente que si el trabajador incumple esta obligación de preaviso y con ello nos causa perjuicios económicos, operativos o comerciales demostrados, nosotros podremos iniciar las acciones legales pertinentes ante el Ministerio de Trabajo, los inspectores de trabajo o ante cualquier autoridad judicial competente, garantizando siempre el respeto al debido proceso constitucional y legal y el cumplimiento estricto de la normativa laboral vigente.</p>
+            <p>Dichas acciones legales tendrán por objeto específico determinar si existió dolo, culpa grave o intencionalidad deliberada en la conducta del trabajador al incumplir el preaviso, cuantificar objetivamente el daño económico que nos haya ocasionado, y obtener la restitución proporcional de nuestros derechos que hayan sido afectados por dicho incumplimiento.</p>
+        </div>
+
+        <div class="section-title">CONTRATO DE APRENDIZAJE</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 9.</span> El contrato de aprendizaje es una forma especial de vinculación dentro del Derecho Laboral, de naturaleza laboral especial y celebrado a término fijo, que se rige por las normas sustantivas del Código Sustantivo del Trabajo, el Decreto 1072 de 2015 en su Título 6 sobre el Sistema Nacional de Aprendizaje, la Ley 789 de 2002 y demás normas concordantes.</p>
+            <p>Mediante esta modalidad contractual, una persona natural desarrolla formación teórica y práctica en una entidad de formación autorizada por el Estado, a cambio de que nosotros como empresa patrocinadora proporcionemos los medios técnicos, tecnológicos, financieros y logísticos necesarios para que el aprendiz adquiera formación profesional metódica, completa y actualizada requerida en el oficio, actividad, ocupación o profesión específica.</p>
+            <p>Esta formación implica que el aprendiz se desempeñe dentro del manejo administrativo, operativo, comercial, técnico o financiero propios del giro ordinario de nuestras actividades empresariales, por un tiempo determinado no superior a tres años, recibiendo a cambio un apoyo de sostenimiento mensual que garantice su proceso formativo, conforme a lo establecido en el artículo 2.2.6.3.1 del Decreto 1072 de 2015.</p>
+            <h3>Elementos particulares y especiales del contrato de aprendizaje:</h3>
+            <p>Son elementos particulares y especiales del contrato de aprendizaje que lo diferencian de otras modalidades contractuales los siguientes:</p>
+            <ul>
+                <li>La finalidad específica y exclusiva es la de facilitar la formación integral en las ocupaciones, oficios, actividades y profesiones a las que se refiere el presente artículo, con un enfoque de desarrollo de competencias laborales específicas.</li>
+                <li>La subordinación jurídica está referida exclusivamente a las actividades propias del proceso de aprendizaje y formación, sin extenderse a otras actividades ajenas al objeto formativo del contrato.</li>
+                <li>La formación se recibe a título estrictamente personal e intransferible, no pudiendo el aprendiz delegar o transferir su posición contractual a terceras personas.</li>
+                <li>El apoyo de sostenimiento mensual tiene como finalidad específica garantizar económicamente el proceso de aprendizaje del beneficiario, permitiéndole dedicarse adecuadamente a su formación.</li>
+            </ul>
+            <h3>Cálculo del apoyo de sostenimiento:</h3>
+            <p>Durante toda la vigencia de la relación de aprendizaje, el aprendiz recibirá de nuestra parte un apoyo de sostenimiento mensual calculado de la siguiente manera:</p>
+            <p>Si se trata de una formación dual que combina teoría y práctica simultáneamente, el aprendiz recibirá como mínimo durante el primer año de formación el equivalente al setenta y cinco por ciento del salario mínimo legal mensual vigente, y durante el segundo año de formación el equivalente al cien por ciento del salario mínimo legal mensual vigente.</p>
+            <p>Si se trata de formación tradicional que separa la fase teórica de la práctica, el aprendiz recibirá como mínimo durante la fase lectiva o teórica el equivalente al setenta y cinco por ciento del salario mínimo mensual vigente, y durante la fase práctica o productiva, el apoyo de sostenimiento será equivalente al cien por ciento del salario mínimo mensual legal vigente.</p>
+            <p>Si el aprendiz es estudiante universitario que realiza sus prácticas profesionales, el apoyo de sostenimiento mensual no podrá ser inferior al equivalente a un salario mínimo legal vigente completo, sin importar si la formación es de modalidad dual o tradicional.</p>
+            <p>Parágrafo - Seguridad Social:</p>
+            <p>Durante la fase lectiva o académica, el aprendiz estará cubierto obligatoriamente por el sistema de seguridad social en salud y riesgos laborales, siendo estos aportes pagados plenamente por nosotros bajo el régimen de trabajadores dependientes, conforme a la normatividad vigente en seguridad social.</p>
+            <p>Durante la fase práctica o productiva, o durante toda la formación cuando sea de modalidad dual, el aprendiz estará afiliado obligatoriamente a riesgos laborales y al sistema de seguridad social integral en pensiones y salud conforme al régimen de trabajadores dependientes, y tendrá derecho al reconocimiento y pago de todas las prestaciones sociales, auxilios y demás derechos económicos propios del contrato laboral ordinario, calculados proporcionalmente según su apoyo de sostenimiento.</p>
+            <p>Término del Contrato:</p>
+            <p>El contrato de aprendizaje tendrá una duración máxima de dos años y deberá comprender tanto la etapa lectiva o académica como la etapa práctica o productiva, garantizando una formación integral y completa del aprendiz, salvo los siguientes casos especiales en los cuales la duración se ajustará a las necesidades específicas del programa formativo y se circunscribirá principalmente al otorgamiento de formación práctica empresarial complementaria a la formación teórica recibida en la institución educativa.</p>
+            <p>Casos especiales de duración:</p>
+            <p>En el caso de prácticas de estudiantes universitarios, la duración máxima de la relación de aprendizaje será exactamente el mismo tiempo que señale el respectivo programa curricular o plan de estudios para la realización de las prácticas profesionales, según lo establecido por la institución de educación superior y aprobado por el Ministerio de Educación Nacional, sin que en ningún caso la duración total pueda llegar a superar el término máximo de dos años establecido legalmente.</p>
+            <p>En el caso de prácticas de estudiantes de programas técnicos profesionales y tecnológicos, la duración máxima de la relación de aprendizaje será de un año, siempre y cuando las prácticas estén expresamente contempladas en el pensum académico del programa y este haya sido debidamente aprobado por la autoridad educativa competente, garantizando que la práctica empresarial complemente adecuadamente la formación teórica recibida.</p>
+            <p>Terminación del Contrato de Aprendizaje:</p>
+            <p>El contrato de aprendizaje podrá darse por terminado por las siguientes causales:</p>
+            <ul>
+                <li>Mutuo acuerdo entre las partes.</li>
+                <li>Vencimiento del término de duración.</li>
+                <li>Cancelación de la matrícula del aprendiz por parte de la institución educativa.</li>
+                <li>Bajo rendimiento o incumplimiento de las obligaciones por parte del aprendiz.</li>
+                <li>Necesidad de la empresa de reducir personal o cerrar operaciones.</li>
+            </ul>
+        </div>
+
+        <div class="chapter-title">CAPÍTULO III</div>
+        <div class="section-title">HORARIO DE TRABAJO</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 10.</span> La duración máxima de la jornada ordinaria de trabajo es de cuarenta y dos (42) horas a la semana, conforme a lo establecido en el artículo 161 del Código Sustantivo del Trabajo, modificado por la Ley 2101 de 2021.</p>
+            <p>La distribución de las 42 horas se podrá realizar de la siguiente manera:</p>
+            <ul>
+                <li>Mediante acuerdo entre nosotros como empleador y el trabajador, se podrán distribuir las 42 horas semanales en 5 o 6 días a la semana, garantizando siempre el día de descanso obligatorio.</li>
+                <li>La jornada máxima diaria podrá ser de 9 horas sin generar trabajo suplementario, siempre y cuando el total de horas semanales no exceda las 42 horas.</li>
+                <li>El tiempo de descanso durante la jornada, que no sea de libre disposición del trabajador, deberá computarse como parte de la jornada de trabajo.</li>
+            </ul>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 11.</span> Horario de Trabajo</p>
+            <p>El horario de trabajo en DISTRILAN SAS se establecerá de acuerdo a las necesidades operacionales y podrá ser:</p>
+            <ul>
+                <li><strong>Personal Administrativo y Comercial:</strong> Lunes a Viernes de 8:00 a.m. a 12:00 p.m. y de 2:00 p.m. a 6:00 p.m., y Sábados de 8:00 a.m. a 12:00 p.m. (Total 42 horas semanales).</li>
+                <li><strong>Personal Operativo y de Distribución:</strong> Se manejarán turnos rotativos que se comunicarán con una antelación no menor a 24 horas, respetando siempre la jornada máxima legal de 42 horas semanales.</li>
+            </ul>
+            <p>Nos reservamos el derecho de modificar el horario de trabajo cuando las necesidades operacionales lo requieran, respetando siempre los límites legales de la jornada de trabajo y comunicando dicha modificación con la debida antelación.</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 12.</span> Trabajo Nocturno, Suplementario y Dominical</p>
+            <ul>
+                <li><strong>Trabajo Nocturno:</strong> Es el que se realiza entre las 9:00 p.m. y las 6:00 a.m. y se remunera con un recargo del 35% sobre el valor del trabajo diurno ordinario.</li>
+                <li><strong>Trabajo Suplementario o de Horas Extras:</strong> Es el que excede la jornada ordinaria de trabajo. El trabajo extra diurno se remunera con un recargo del 25%, y el trabajo extra nocturno con un recargo del 75% sobre el salario ordinario.</li>
+                <li><strong>Trabajo Dominical y Festivo:</strong> Se remunera con un recargo del 75% sobre el salario ordinario, además del descanso compensatorio remunerado.</li>
+            </ul>
+            <p>Para el reconocimiento y pago del trabajo suplementario, nocturno o en días de descanso obligatorio, es indispensable la autorización previa y escrita de la Gerencia o del jefe inmediato, conforme al artículo 159 del Código Sustantivo del Trabajo.</p>
+        </div>
+
+        <div class="chapter-title">CAPÍTULO IV</div>
+        <div class="section-title">DÍAS DE DESCANSO LEGALMENTE OBLIGATORIO</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 13.</span> Días de Descanso Obligatorio</p>
+            <p>Son días de descanso obligatorio remunerado:</p>
+            <ul>
+                <li>Todos los domingos y festivos que la ley colombiana determine como tales.</li>
+                <li>Los días de descanso remunerado por licencia de luto, licencia de paternidad, licencia de maternidad y licencia por calamidad doméstica, conforme a la ley.</li>
+            </ul>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 14.</span> Remuneración del Descanso Dominical</p>
+            <p>El descanso dominical remunerado será obligatorio y se pagará con el salario ordinario de un día, conforme al artículo 173 del Código Sustantivo del Trabajo.</p>
+            <p>Cuando el trabajador no labore la semana completa por su culpa, se le pagará el dominical en proporción al tiempo laborado.</p>
+        </div>
+
+        <div class="chapter-title">CAPÍTULO V</div>
+        <div class="section-title">VACACIONES REMUNERADAS</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 15.</span> Derecho a Vacaciones</p>
+            <p>Todo trabajador que hubiere prestado sus servicios durante un año tiene derecho a quince (15) días hábiles consecutivos de vacaciones remuneradas, conforme al artículo 186 del Código Sustantivo del Trabajo.</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 16.</span> Época de Vacaciones</p>
+            <p>La época de vacaciones será señalada por nosotros como empleador, a más tardar dentro del año siguiente a la fecha en que se causen, y se concederán oficiosamente o a petición del trabajador, sin perjuicio de que se acumulen hasta por dos períodos, conforme al artículo 187 del Código Sustantivo del Trabajo.</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 17.</span> Compensación en Dinero</p>
+            <p>Solo se podrá compensar en dinero hasta la mitad de las vacaciones, previo acuerdo escrito entre nosotros y el trabajador, conforme al artículo 189 del Código Sustantivo del Trabajo.</p>
+        </div>
+
+        <div class="chapter-title">CAPÍTULO VI</div>
+        <div class="section-title">PERMISOS Y LICENCIAS REMUNERADAS</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 18.</span> Licencias Remuneradas</p>
+            <p>Concederemos a nuestros trabajadores las siguientes licencias remuneradas:</p>
+            <ul>
+                <li><strong>Licencia por Luto:</strong> Cinco (5) días hábiles en caso de fallecimiento del cónyuge, compañero(a) permanente, o de un familiar hasta el grado segundo de consanguinidad, primero de afinidad y primero civil, conforme a la Ley 1635 de 2013.</li>
+                <li><strong>Licencia de Paternidad:</strong> Diez (10) días hábiles remunerados, conforme a la Ley 2114 de 2021.</li>
+                <li><strong>Licencia por Calamidad Doméstica:</strong> El tiempo necesario, a juicio de la empresa, para atender la situación, siempre que se demuestre la ocurrencia del hecho.</li>
+            </ul>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 19.</span> Permisos</p>
+            <p>Concederemos los permisos necesarios para el ejercicio del derecho al sufragio, desempeño de cargos oficiales transitorios de forzosa aceptación, y en caso de grave calamidad doméstica debidamente comprobada.</p>
+        </div>
+
+        <div class="chapter-title">CAPÍTULO VII</div>
+        <div class="section-title">SALARIO MÍNIMO, LUGAR, DÍAS Y HORAS DE PAGO</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 20.</span> El salario mínimo convencional será el legalmente establecido por el Gobierno Nacional, salvo que por acuerdo individual o colectivo se pacte un salario superior.</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 21.</span> Forma de Pago</p>
+            <p>El pago del salario se efectuará por transferencia electrónica a la cuenta bancaria que el trabajador haya designado, o en su defecto, en efectivo en las oficinas de la empresa.</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 22.</span> Período de Pago</p>
+            <p>El pago de los salarios se efectuará de forma quincenal, los días 15 y 30 de cada mes, o el día hábil inmediatamente anterior si estos coincidieran con un domingo o festivo.</p>
+        </div>
+
+        <div class="chapter-title">CAPÍTULO VIII</div>
+        <div class="section-title">SERVICIO MÉDICO, MEDIDAS DE SEGURIDAD Y RIESGOS LABORALES</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 23.</span> Afiliación y Prestación de Servicios</p>
+            <p>Todo trabajador estará afiliado al Sistema de Seguridad Social Integral (Salud, Pensión y Riesgos Laborales), y recibirá la atención médica y prestaciones económicas a través de las entidades correspondientes (EPS, AFP y ARL).</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 24.</span> Obligaciones en Seguridad y Salud en el Trabajo (SST)</p>
+            <p>Nos comprometemos a:</p>
+            <ul>
+                <li>Dar cumplimiento a las disposiciones legales en SST.</li>
+                <li>Adoptar las medidas necesarias para la protección de la vida y la salud de nuestros trabajadores.</li>
+                <li>Suministrar los elementos de protección personal (EPP) necesarios.</li>
+                <li>Realizar exámenes médicos ocupacionales de ingreso, periódicos y de retiro.</li>
+            </ul>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 25.</span> Obligaciones del Trabajador en SST</p>
+            <p>Los trabajadores tienen la obligación de:</p>
+            <ul>
+                <li>Procurar el cuidado integral de su salud.</li>
+                <li>Suministrar información clara, veraz y completa sobre su estado de salud.</li>
+                <li>Cumplir las normas, reglamentos e instrucciones de SST.</li>
+                <li>Participar en las actividades de capacitación de SST.</li>
+                <li>Usar y cuidar los EPP suministrados.</li>
+            </ul>
+        </div>
+
+        <div class="chapter-title">CAPÍTULO IX</div>
+        <div class="section-title">DISPOSICIONES ESPECIALES PARA TRABAJADORAS</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 26.</span> Licencia de Maternidad</p>
+            <p>Toda trabajadora en estado de embarazo tiene derecho a una licencia de dieciocho (18) semanas en la época del parto, remunerada con el salario que devengue al entrar a disfrutar del descanso, conforme a la Ley 1822 de 2017.</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 27.</span> Descanso Remunerado por Lactancia</p>
+            <p>Nos comprometemos a conceder a la trabajadora dos descansos de treinta (30) minutos cada uno, dentro de la jornada para amamantar a su hijo, hasta que este cumpla los seis (6) meses de edad.</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 28.</span> Prohibición de Despido por Maternidad</p>
+            <p>Ninguna trabajadora podrá ser despedida por motivo de embarazo o lactancia sin la autorización previa del Inspector de Trabajo.</p>
+        </div>
+
+        <div class="chapter-title">CAPÍTULO X</div>
+        <div class="section-title">OBLIGACIONES ESPECIALES DEL EMPLEADOR</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 29.</span> Obligaciones Generales</p>
+            <p>Son obligaciones especiales nuestras como empleador, además de las establecidas en el Código Sustantivo del Trabajo:</p>
+            <ul>
+                <li>Poner a disposición de los trabajadores los instrumentos adecuados y las materias primas necesarias para la realización de las labores.</li>
+                <li>Pagar la remuneración pactada en las condiciones, períodos y lugares convenidos.</li>
+                <li>Guardar absoluto respeto a la dignidad personal del trabajador, a sus creencias y sentimientos.</li>
+                <li>Conceder al trabajador las licencias necesarias para el ejercicio del sufragio.</li>
+                <li>Dar al trabajador que lo solicite, a la expiración del contrato, una certificación donde conste el tiempo de servicio, la índole de la labor y el salario devengado.</li>
+                <li>Cumplir con el Reglamento y mantener el orden, la moralidad y el respeto a las leyes.</li>
+            </ul>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 30.</span> Obligaciones especiales con trabajadoras</p>
+            <p>Conservar el puesto a las empleadas que estén disfrutando de los descansos remunerados por lactancia o por licencia de enfermedad motivada en el embarazo o parto. No producirá efecto alguno el despido que comuniquemos a la trabajadora en tales períodos.</p>
+            <p>Conceder en forma oportuna a la trabajadora en estado de embarazo la licencia remunerada de dieciocho (18) semanas consagrada en la Ley 1822 de 2017, de forma que empiece a disfrutarla de manera obligatoria una (1) semana antes o dos (2) semanas antes de la fecha probable del parto, según decisión de la futura madre.</p>
+            <h3>Obligaciones especiales con menores de edad:</h3>
+            <p>Garantizar el acceso del trabajador menor de edad a la capacitación laboral y conceder licencia no remunerada cuando la actividad escolar así lo requiera.</p>
+            <p>Afiliarlo al Sistema de Seguridad Social Integral, suministrarle cada cuatro (4) meses en forma gratuita un par de zapatos y un vestido de labor, teniendo en cuenta que la remuneración mensual sea hasta dos veces el salario mínimo vigente.</p>
+            <h3>Cumplimiento general:</h3>
+            <p>Cumplir este reglamento y mantener el orden, la moralidad y el respeto a las leyes, promoviendo un ambiente laboral digno y respetuoso.</p>
+        </div>
+
+        <div class="chapter-title">CAPÍTULO XI</div>
+        <div class="section-title">OBLIGACIONES DE LOS TRABAJADORES</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 58.</span> En nuestra empresa, nuestros trabajadores tienen las siguientes obligaciones conforme al artículo 58 del Código Sustantivo del Trabajo:</p>
+            <h3>Ejecución personal del trabajo:</h3>
+            <p>Realizar personalmente la labor en los términos estipulados; observar los preceptos de este reglamento y acatar y cumplir las órdenes e instrucciones que de manera particular le imparta nuestra empresa o nuestros representantes, según el orden jerárquico establecido.</p>
+            <h3>Confidencialidad y lealtad:</h3>
+            <p>No comunicar a terceros, salvo autorización expresa, las informaciones que tenga sobre su trabajo, especialmente sobre asuntos que sean de naturaleza reservada y cuya divulgación pueda ocasionar perjuicios a DISTRILAN SAS, lo que no obsta para denunciar delitos comunes o violaciones del contrato o de las normas legales de trabajo ante las autoridades competentes.</p>
+            <h3>Conservación de bienes:</h3>
+            <p>Conservar y restituir en buen estado, salvo el deterioro natural, los instrumentos y útiles que le hayan sido facilitados y las materias primas sobrantes, incluyendo vehículos, equipos de bodega y herramientas de trabajo.</p>
+            <h3>Conducta moral y profesional:</h3>
+            <p>Guardar rigurosamente la moral en las relaciones con sus superiores y compañeros, manteniendo un comportamiento respetuoso y profesional en todo momento.</p>
+            <h3>Colaboración y comunicación:</h3>
+            <p>Comunicar oportunamente a nuestra empresa las observaciones que estime conducentes a evitarnos daños y perjuicios, contribuyendo al mejoramiento continuo de nuestros procesos.</p>
+            <p>Prestar la colaboración posible en caso de siniestro o riesgo inminente que afecten o amenacen las personas o las cosas de nuestra empresa.</p>
+            <h3>Cumplimiento de medidas preventivas:</h3>
+            <p>Observar las medidas preventivas higiénicas prescritas por el médico de la empresa o por las autoridades del ramo y observar con suma diligencia y cuidado las instrucciones y órdenes preventivas de accidentes o de enfermedades laborales.</p>
+            <p>Usar los elementos de protección personal (EPP) suministrados por nosotros como empleador, manteniéndolos en buen estado y reportando cualquier daño o deterioro.</p>
+            <h3>Información personal actualizada:</h3>
+            <p>Registrar en nuestras oficinas su domicilio y dirección y dar aviso oportuno de cualquier cambio que ocurra, manteniendo actualizada su información de contacto y datos personales.</p>
+            <h3>Obligación especial para trabajadoras embarazadas:</h3>
+            <p>La trabajadora en estado de embarazo debe empezar a disfrutar la licencia remunerada consagrada en el artículo 236 del Código Sustantivo del Trabajo, al menos una semana antes de la fecha probable del parto, conforme a la Ley 1468 de 2011.</p>
+        </div>
+
+        <div class="section-title">PROHIBICIONES EN LA EMPRESA</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 59.</span> En DISTRILAN SAS se prohíbe lo siguiente, conforme al artículo 59 del Código Sustantivo del Trabajo y demás normas laborales vigentes:</p>
+            <h3>Prohibiciones relacionadas con salarios y prestaciones:</h3>
+            <p>Deducir, retener o compensar suma alguna del monto de los salarios y prestaciones en dinero que corresponda a nuestros trabajadores, sin autorización previa escrita de éstos para cada caso, o sin mandamiento judicial, con excepción de:</p>
+            <ul>
+                <li>Respecto de salarios: Pueden hacerse deducciones, retenciones o compensaciones en los casos autorizados por los artículos 113, 150, 151, 152 y 400 del Código Sustantivo del Trabajo.</li>
+                <li>Las cooperativas pueden ordenar retenciones hasta de un cincuenta por ciento (50%) de salarios y prestaciones, para cubrir sus créditos, en la forma y casos autorizados por la ley.</li>
+            </ul>
+            <h3>Prohibiciones sobre libertad del trabajador:</h3>
+            <p>Obligar en cualquier forma a nuestros trabajadores a comprar mercancías o víveres en almacenes o proveedurías que establezcamos como empleador.</p>
+            <p>Exigir o aceptar dinero del trabajador como gratificación para que se le admita en el trabajo o por otro motivo cualquiera que se refiera a las condiciones de éste.</p>
+            <p>Limitar o presionar en cualquier forma a nuestros trabajadores en el ejercicio de su derecho de asociación sindical, conforme al artículo 39 de la Constitución Política.</p>
+            <h3>Prohibiciones políticas y religiosas:</h3>
+            <p>Imponer a nuestros trabajadores obligaciones de carácter religioso o político, o dificultarles o impedirles el ejercicio del derecho del sufragio.</p>
+            <p>Hacer, autorizar o tolerar propaganda política en los sitios de trabajo.</p>
+            <p>Hacer o permitir todo género de rifas, colectas o suscripciones en los mismos sitios de trabajo.</p>
+            <h3>Prohibiciones sobre certificaciones y listas negras:</h3>
+            <p>Emplear en las certificaciones signos convencionales que tiendan a perjudicar a los interesados, o adoptar el sistema de “lista negra”, cualquiera que sea la modalidad que utilicemos, para que no se ocupe en otras empresas a los trabajadores que se separen o sean separados del servicio.</p>
+            <h3>Prohibiciones sobre dignidad y derechos:</h3>
+            <p>Ejecutar o autorizar cualquier acto que vulnere o restrinja los derechos de nuestros trabajadores o que ofenda su dignidad, conforme a los principios constitucionales de dignidad humana y derechos fundamentales.</p>
+            <h3>Prohibiciones sobre cierre de la empresa:</h3>
+            <p>Cerrar intempestivamente nuestra empresa. Si lo hiciéramos, además de incurrir en sanciones legales, deberemos pagar a nuestros trabajadores los salarios, prestaciones o indemnizaciones por el lapso que dure cerrada la empresa.</p>
+            <p><span class="article-title">Consecuencia por retención ilegal de salarios:</span> Cuando se compruebe que nosotros como empleador en forma ilegal hemos retenido o disminuido colectivamente los salarios a nuestros trabajadores, la cesación de actividades de estos será imputable a nosotros y les dará derecho a reclamar los salarios correspondientes al tiempo de suspensión de labores.</p>
+        </div>
+
+        <div class="section-title">PROHIBICIONES PARA LOS TRABAJADORES</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 60.</span> En DISTRILAN SAS se prohíbe a nuestros trabajadores:</p>
+            <h3>Sustracción y mal uso de bienes:</h3>
+            <p>Sustraer de nuestra empresa los útiles de trabajo, las materias primas o productos elaborados sin permiso expreso de nuestra administración.</p>
+            <p>Utilizar los útiles, herramientas o equipos suministrados por nosotros en objetivos distintos del trabajo contratado o para uso personal.</p>
+            <p>Utilizar los vehículos de nuestra empresa para realizar diligencias personales o transportar personas particulares sin autorización.</p>
+            <p>Vender los elementos de protección personal o la dotación suministrada por nuestra empresa a cualquier persona dentro o fuera de la misma.</p>
+            <h3>Confidencialidad e información:</h3>
+            <p>Divulgar, sustraer, compartir o hacer uso inadecuado de toda la información de DISTRILAN SAS, incluyendo datos de clientes, rutas de distribución, precios, estrategias comerciales y procedimientos internos.</p>
+            <p>Revelar cualquier información confidencial de nuestra empresa a terceros, competidores o personas no autorizadas.</p>
+            <h3>Sustancias psicoactivas y alcohol:</h3>
+            <p>Presentarse al trabajo en estado de embriaguez o bajo la influencia de narcóticos o drogas enervantes, así mismo se prohíbe llegar al trabajo con resaca (guayabo).</p>
+            <p>Consumir, portar o distribuir bebidas alcohólicas, sustancias psicoactivas o estupefacientes dentro de nuestras instalaciones o vehículos de la empresa.</p>
+            <h3>Seguridad y protección:</h3>
+            <p>No cumplir con los protocolos de seguridad establecidos, haciendo caso omiso al uso de EPP de manera adecuada y permanente o a cualquier recomendación de su jefe inmediato.</p>
+            <p>Conservar armas de cualquier clase en el sitio de trabajo, a excepción de las que con autorización legal pueden llevar los celadores.</p>
+            <p>Realizar actividades inseguras que pongan en riesgo su integridad física y la de sus compañeros, especialmente en actividades de carga, descarga y transporte.</p>
+            <h3>Asistencia y puntualidad:</h3>
+            <p>Faltar al trabajo sin justa causa de impedimento y sin permiso de nuestra empresa.</p>
+            <p>Llegar tarde incumpliendo el horario establecido sin justificación válida.</p>
+            <p>Ausentarse dentro de la jornada laboral sin permiso directo de su jefe inmediato.</p>
+            <p>Quedarse dentro de nuestras instalaciones fuera del horario laboral sin justa causa o autorización.</p>
+            <h3>Conducta y disciplina:</h3>
+            <p>Hacer colectas, rifas o suscripciones de cualquier clase en los lugares de trabajo.</p>
+            <p>Hacer negocios propios relacionados con la actividad económica de nuestra empresa, buscando beneficios personales (abuso de buena fe contractual).</p>
+            <p>Realizar trabajos alternos de manera particular dentro de la jornada laboral.</p>
+            <p>Tener conductas inapropiadas portando el uniforme de nuestra empresa o cualquier vestimenta asociada con la misma.</p>
+            <p>Realizar acoso laboral, teniendo conductas ofensivas e intimidatorias con sus compañeros o jefes.</p>
+        </div>
+
+        <div class="chapter-title">CAPÍTULO XII</div>
+        <div class="section-title">ESCALA DE FALTAS Y SANCIONES DISCIPLINARIAS</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 65.</span> En DISTRILAN SAS establecemos la siguiente clasificación de faltas disciplinarias y sus correspondientes sanciones, aplicando el principio de proporcionalidad establecido en la Ley 2466 de 2025 y garantizando el debido proceso conforme al artículo 29 de la Constitución Política:</p>
+            <h3>FALTAS LEVES</h3>
+            <p><span class="article-title">Definición:</span> Son aquellas conductas que alteran el orden y la disciplina laboral sin causar perjuicio grave a nuestra empresa, compañeros de trabajo o terceros.</p>
+            <p><span class="article-title">Artículo 66.</span> Faltas leves y sus sanciones:</p>
+            <ol>
+                <li><strong>RETRASOS EN LA LLEGADA AL TRABAJO</strong>
+                    <p>Retraso hasta 15 minutos sin causa justificada que NO cause paro o freno en las operaciones de nuestra empresa:</p>
+                    <ul>
+                        <li>Primera vez: Llamado de atención verbal con registro escrito</li>
+                        <li>Segunda vez: Llamado de atención escrito</li>
+                        <li>Tercera vez: Descuento de 2 horas laborales</li>
+                        <li>Cuarta vez: Descuento de medio día laboral</li>
+                    </ul>
+                </li>
+                <li><strong>PÉRDIDAS ECONÓMICAS MENORES</strong>
+                    <p>Pérdidas de dinero, productos o bienes de nuestra empresa hasta $20.000 pesos por negligencia leve:</p>
+                    <ul>
+                        <li>Primera vez: Llamado de atención escrito + reposición del valor</li>
+                        <li>Segunda vez: Descuento de 4 horas laborales + reposición del valor</li>
+                        <li>Tercera vez: Descuento de 1 día laboral + reposición del valor</li>
+                    </ul>
+                </li>
+                <li><strong>OTRAS FALTAS LEVES</strong>
+                    <ul>
+                        <li>Incumplimiento menor de normas de presentación personal sin afectar la imagen corporativa.</li>
+                        <li>Uso inadecuado de elementos de trabajo sin causar daño o pérdida.</li>
+                        <li>Consumo de alimentos en áreas no autorizadas durante la jornada laboral.</li>
+                    </ul>
+                    <p>Sanciones para otras faltas leves: - Primera vez: Llamado de atención verbal - Segunda vez: Llamado de atención escrito - Tercera vez: Descuento de 4 horas laborales</p>
+                </li>
+            </ol>
+
+            <h3>FALTAS GRAVES</h3>
+            <p><span class="article-title">Definición:</span> Son aquellas conductas que afectan significativamente el normal desarrollo de las actividades, causan perjuicio considerable a nuestra empresa o ponen en riesgo la seguridad.</p>
+            <p><span class="article-title">Artículo 67.</span> Faltas graves y sus sanciones:</p>
+            <ol>
+                <li><strong>RETRASOS QUE AFECTAN OPERACIONES</strong>
+                    <p>Retraso hasta 30 minutos o que cause un freno en las operaciones de nuestra empresa del 10% de la planta operativa:</p>
+                    <ul>
+                        <li>Primera vez: Suspensión de 1 día sin goce de salario</li>
+                        <li>Segunda vez: Suspensión de 3 días sin goce de salario</li>
+                        <li>Tercera vez: Suspensión de 5 días sin goce de salario</li>
+                    </ul>
+                </li>
+                <li><strong>PÉRDIDAS ECONÓMICAS CONSIDERABLES</strong>
+                    <p>Pérdidas de dinero, productos o bienes de nuestra empresa entre $20.001 y $50.000 pesos:</p>
+                    <ul>
+                        <li>Primera vez: Suspensión de 2 días sin goce de salario + reposición del valor</li>
+                        <li>Segunda vez: Suspensión de 5 días sin goce de salario + reposición del valor</li>
+                        <li>Tercera vez: Suspensión de 8 días sin goce de salario + reposición del valor</li>
+                    </ul>
+                </li>
+                <li><strong>INASISTENCIA INJUSTIFICADA</strong>
+                    <p>Falta completa al trabajo sin excusa suficiente que NO cause perjuicio grave a nuestra empresa, entendiendo por perjuicio grave que cause un freno en las operaciones de nuestra empresa de hasta 10% de la planta operativa:</p>
+                    <ul>
+                        <li>Primera vez: Suspensión de 1 día sin goce de salario</li>
+                        <li>Segunda vez: Suspensión de 3 días sin goce de salario</li>
+                        <li>Tercera vez: Suspensión de 5 días sin goce de salario</li>
+                    </ul>
+                </li>
+                <li><strong>INCUMPLIMIENTO DE SEGURIDAD</strong>
+                    <ul>
+                        <li>No hacer uso de los elementos de protección personal suministrados.</li>
+                        <li>Incumplir protocolos de seguridad en el manejo de vehículos o equipos.</li>
+                        <li>Realizar actividades que pongan en riesgo la seguridad sin causar accidente.</li>
+                    </ul>
+                </li>
+                <li><strong>OTRAS FALTAS GRAVES</strong>
+                    <ul>
+                        <li>Revelar información no crítica de nuestra empresa a terceros.</li>
+                        <li>Ausentarse durante la jornada laboral sin permiso del jefe inmediato.</li>
+                        <li>Utilizar vehículos de la empresa para uso personal sin autorización.</li>
+                        <li>Realizar trabajos alternos dentro de la jornada laboral.</li>
+                        <li>Incumplir normas de manipulación de alimentos establecidas por las autoridades sanitarias.</li>
+                        <li>Usar el teléfono personal para la recepción de pedidos de la empresa o la comunicación con clientes.</li>
+                    </ul>
+                    <p>Sanciones para faltas graves generales: - Primera vez: Suspensión de 1 a 3 días sin goce de salario - Segunda vez: Suspensión de 3 a 5 días sin goce de salario - Tercera vez: Suspensión de 5 a 8 días sin goce de salario</p>
+                </li>
+            </ol>
+
+            <h3>FALTAS GRAVÍSIMAS</h3>
+            <p><span class="article-title">Definición:</span> Son aquellas conductas que atentan gravemente contra la disciplina, la seguridad, la moral, los bienes de la empresa o constituyen justa causa para la terminación del contrato.</p>
+            <p><span class="article-title">Artículo 68.</span> Faltas gravísimas y sus sanciones:</p>
+            <ol>
+                <li><strong>INASISTENCIA CRÍTICA</strong>
+                    <ul>
+                        <li>Cualquier inasistencia que supere los parámetros y numero de veces de faltas leves y graves, o que cause paralización de operaciones críticas de distribución.</li>
+                        <li>Abandono del puesto de trabajo durante rutas de distribución o entregas críticas.</li>
+                    </ul>
+                </li>
+                <li><strong>PÉRDIDAS ECONÓMICAS GRAVES</strong>
+                    <p>Pérdidas de dinero, productos o bienes de nuestra empresa superiores a $50.000 pesos:</p>
+                    <ul>
+                        <li>Primera vez: Suspensión de 8 a 15 días sin goce de salario + reposición del valor + proceso disciplinario</li>
+                        <li>Reincidencia: Terminación del contrato por justa causa</li>
+                    </ul>
+                </li>
+                <li><strong>SUSTANCIAS PSICOACTIVAS</strong>
+                    <ul>
+                        <li>Presentarse al trabajo en estado de embriaguez, bajo efectos de sustancias psicoactivas o con resaca (guayabo).</li>
+                        <li>Consumir, portar o distribuir alcohol o sustancias psicoactivas en instalaciones o vehículos.</li>
+                    </ul>
+                </li>
+                <li><strong>VIOLENCIA Y AGRESIÓN</strong>
+                    <ul>
+                        <li>Cualquier tipo de agresión física o verbal hacia compañeros, superiores, clientes o terceros.</li>
+                        <li>Acoso laboral, sexual o cualquier forma de violencia basada en género.</li>
+                        <li>Amenazas ya sea de despido o de renuncia o intimidación a cualquier persona en el ámbito laboral.</li>
+                    </ul>
+                </li>
+                <li><strong>SUSTRACCIÓN Y FRAUDE</strong>
+                    <ul>
+                        <li>Sustraer bienes de nuestra empresa, clientes o compañeros.</li>
+                        <li>Falsificar documentos, firmas o información de la empresa.</li>
+                        <li>Apropiarse indebidamente de dineros, productos o bienes.</li>
+                    </ul>
+                </li>
+                <li><strong>VIOLACIÓN DE CONFIDENCIALIDAD CRÍTICA</strong>
+                    <ul>
+                        <li>Revelar información crítica como rutas, clientes estratégicos, precios confidenciales o estrategias comerciales.</li>
+                        <li>Competencia desleal utilizando información de nuestra empresa.</li>
+                    </ul>
+                </li>
+                <li><strong>SEGURIDAD CRÍTICA</strong>
+                    <ul>
+                        <li>Conducir vehículos de la empresa bajo efectos de alcohol o sustancias.</li>
+                        <li>Causar accidentes por negligencia grave o imprudencia temeraria.</li>
+                        <li>Violar gravemente protocolos de seguridad causando riesgo inminente.</li>
+                    </ul>
+                </li>
+                <li><strong>OTRAS FALTAS GRAVÍSIMAS</strong>
+                    <ul>
+                        <li>Porte de armas no autorizadas en instalaciones o vehículos.</li>
+                        <li>Sabotaje a equipos, vehículos o instalaciones.</li>
+                        <li>Incumplimiento grave de normas sanitarias en manipulación de alimentos.</li>
+                        <li>Sanciones para faltas gravísimas: - Primera vez: Suspensión de 8 a 15 días sin goce de salario - Reincidencia o gravedad extrema: Terminación del contrato por justa causa</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3>FALTAS ESPECÍFICAS PARA DISTRIBUCIÓN DE ALIMENTOS</h3>
+            <p><span class="article-title">Artículo 69.</span> Considerando nuestra actividad económica de distribución de alimentos, establecemos las siguientes faltas específicas:</p>
+            <p><strong>FALTAS LEVES ESPECÍFICAS</strong></p>
+            <ul>
+                <li>Incumplir horarios de carga y descarga que no afecten entregas críticas.</li>
+                <li>No reportar anomalías menores en vehículos o productos.</li>
+                <li>Descuido menor en la presentación de productos durante la distribución.</li>
+            </ul>
+            <p><strong>FALTAS GRAVES ESPECÍFICAS</strong></p>
+            <ul>
+                <li>Romper la cadena de frío de productos refrigerados por negligencia.</li>
+                <li>Entregar productos en lugares no autorizados o a personas no designadas.</li>
+                <li>Incumplir rutas establecidas sin autorización previa.</li>
+                <li>Daños menores a vehículos por mal manejo o negligencia.</li>
+            </ul>
+            <p><strong>FALTAS GRAVÍSIMAS ESPECÍFICAS</strong></p>
+            <ul>
+                <li>Contaminar productos alimenticios por incumplimiento de normas sanitarias.</li>
+                <li>Vender o desviar productos de la empresa para beneficio personal o ageno.</li>
+                <li>Causar intoxicación alimentaria por negligencia grave en el manejo.</li>
+                <li>Accidentes graves con vehículos por imprudencia o violación de normas de tránsito.</li>
+            </ul>
+
+            <h3>APLICACIÓN DE SANCIONES Y DESCUENTOS</h3>
+            <p><span class="article-title">Artículo 70.</span> En DISTRILAN SAS realizaremos el pago del salario correspondiente, descontando el tiempo dejado de trabajar por nuestros empleados que tuvieron sanciones disciplinarias. El pago de seguridad social se hace de manera total por el mes, haciendo los descuentos correspondientes al empleado (4% salud y 4% pensión), sin perjuicio del tiempo que no se le haya cancelado debido a la sanción.</p>
+            <p><span class="article-title">Descuento proporcional:</span> Se descontarán de la misma manera el pago de todas las prestaciones sociales de acuerdo a los días descontados por la sanción aplicada.</p>
+            <p><span class="article-title">Registro de sanciones:</span> Llevaremos un registro detallado de todas las sanciones aplicadas, el cual formará parte del expediente laboral del trabajador.</p>
+        </div>
+
+        <div class="section-title">PROCEDIMIENTOS DISCIPLINARIOS</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 71.</span> Para aplicar sanciones disciplinarias en DISTRILAN SAS, aplicaremos el procedimiento según el número de trabajadores:</p>
+            <h3>PROCESO SANCIONATORIO SIMPLIFICADO</h3>
+            <p>Se aplica cuando en la Empresa contemos con menos de 10 trabajadores</p>
+            <p><strong>Responsable:</strong> Jefe de Recursos Humanos o Gerente</p>
+            <p><strong>Procedimiento conforme al artículo 7° de la Ley 2466 de 2025:</strong></p>
+            <ol>
+                <li>Comunicación formal de apertura del proceso disciplinario</li>
+                <li>Formulación de cargos por escrito, correo electrónico o mensajería instantánea</li>
+                <li>Traslado de pruebas al trabajador</li>
+                <li>Término para descargos: Mínimo 2 días hábiles (proceso simplificado)</li>
+                <li>Decisión final debidamente motivada</li>
+                <li>Imposición de sanción proporcional</li>
+                <li>Derecho de impugnación ante instancia superior</li>
+            </ol>
+            <h3>PROCESO SANCIONATORIO DE DOBLE INSTANCIA</h3>
+            <p>Se aplica cuando en la Empresa contemos con mas de 10 trabajadores</p>
+            <p><strong>Primera instancia:</strong> Jefe de Recursos Humanos <strong>Segunda instancia:</strong> Gerente General</p>
+            <p><strong>Procedimiento conforme al artículo 7° de la Ley 2466 de 2025:</strong></p>
+            <ol>
+                <li>Comunicación formal de apertura del proceso disciplinario</li>
+                <li>Formulación de cargos detallada por escrito</li>
+                <li>Traslado de pruebas completo al trabajador</li>
+                <li>Término para descargos: Mínimo 5 días hábiles</li>
+                <li>Decisión de primera instancia</li>
+                <li>Derecho de apelación ante segunda instancia</li>
+                <li>Decisión final en segunda instancia</li>
+                <li>Imposición de sanción definitiva</li>
+            </ol>
+            <h3>GARANTÍAS DEL DEBIDO PROCESO</h3>
+            <p><span class="article-title">Artículo 72.</span> En todas las actuaciones para aplicar sanciones disciplinarias en DISTRILAN SAS, aplicaremos las siguientes garantías del debido proceso conforme al artículo 29 de la Constitución Política y la Ley 2466 de 2025:</p>
+            <p><strong>PRINCIPIOS FUNDAMENTALES</strong></p>
+            <ul>
+                <li>Dignidad humana: Respeto integral a la persona del trabajador</li>
+                <li>Presunción de inocencia: El trabajador se presume inocente hasta que se demuestre su responsabilidad</li>
+                <li>In dubio pro disciplinado: En caso de duda, se favorece al trabajador</li>
+                <li>Proporcionalidad: La sanción debe ser proporcional a la falta cometida</li>
+                <li>Derecho a la defensa: Oportunidad real y efectiva de defenderse</li>
+                <li>Contradicción: Derecho a controvertir las pruebas en su contra</li>
+                <li>Intimidad: Respeto a la vida privada del trabajador</li>
+                <li>Lealtad y buena fe: Actuación de buena fe de todas las partes</li>
+                <li>Imparcialidad: Objetividad en la investigación y decisión</li>
+                <li>Respeto al buen nombre: Protección de la honra y reputación</li>
+                <li>Non bis in ídem: No doble sanción por el mismo hecho</li>
+            </ul>
+            <p><strong>PROCEDIMIENTO MÍNIMO OBLIGATORIO</strong></p>
+            <ul>
+                <li>Comunicación formal: Informaremos al trabajador la apertura del proceso disciplinario</li>
+                <li>Formulación clara: Los cargos serán específicos, claros y precisos</li>
+                <li>Traslado completo: Entregaremos todas las pruebas que fundamentan los cargos</li>
+                <li>Término adecuado: Concederemos tiempo suficiente para preparar la defensa</li>
+                <li>Descargos efectivos: El trabajador podrá presentar descargos escritos o verbales</li>
+                <li>Análisis completo: Analizaremos todos los argumentos y pruebas presentadas</li>
+                <li>Decisión motivada: La decisión será fundamentada y proporcional</li>
+                <li>Derecho de impugnación: Garantizaremos el derecho a apelar la decisión</li>
+                <li>Término razonable: Todo el proceso se realizará en tiempo razonable aplicando el principio de inmediatez</li>
+                <li>Constancia escrita: Dejaremos constancia escrita de todos los hechos y decisiones</li>
+            </ul>
+        </div>
+
+        <div class="chapter-title">CAPÍTULO XIII</div>
+        <div class="section-title">RECLAMOS: PERSONAS ANTE QUIENES DEBEN PRESENTARSE Y SU TRAMITACIÓN</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 67.</span> En DISTRILAN SAS establecemos que los reclamos de nuestros trabajadores se harán ante las siguientes instancias:</p>
+            <h3>INSTANCIAS PARA PRESENTAR RECLAMOS</h3>
+            <p><strong>Gerente General:</strong> Los reclamos podrán presentarse directamente ante la persona que ocupe en nuestra empresa el cargo de Gerente General.</p>
+            <p><strong>Comité de Convivencia Laboral:</strong> Los reclamos también podrán presentarse ante nuestro Comité de Convivencia Laboral.</p>
+            <h3>MODALIDADES DE PRESENTACIÓN</h3>
+            <p><strong>Forma verbal:</strong> Los trabajadores podrán exponer su situación de manera verbal ante cualquiera de las instancias mencionadas.</p>
+            <p><strong>Forma escrita:</strong> Para dejar constancia formal del reclamo, deberá presentarse por escrito, especificando claramente los hechos, fechas y solicitudes específicas.</p>
+            <h3>PROCEDIMIENTO DE TRAMITACIÓN</h3>
+            <p><strong>Recepción:</strong> En DISTRILAN SAS recibiremos todos los reclamos dentro de los dos (2) días hábiles siguientes a su presentación.</p>
+            <p><strong>Análisis:</strong> Analizaremos cada reclamo de manera objetiva e imparcial, garantizando el derecho de defensa de todas las partes involucradas.</p>
+            <p><strong>Respuesta:</strong> Daremos respuesta por escrito en un término no mayor a quince (15) días hábiles, contados desde la fecha de recepción del reclamo.</p>
+            <p><strong>Seguimiento:</strong> Realizaremos seguimiento al cumplimiento de las decisiones adoptadas.</p>
+            <h3>GARANTÍAS PROCESALES</h3>
+            <p><strong>Confidencialidad:</strong> En nuestra empresa garantizamos la confidencialidad de la información relacionada con los reclamos.</p>
+        </div>
+
+        <div class="chapter-title">CAPÍTULO XIV</div>
+        <div class="section-title">MECANISMOS DE PREVENCIÓN DEL ACOSO LABORAL Y PROCEDIMIENTO INTERNO DE SOLUCIÓN</div>
+        <h3>1. DEFINICIONES Y MARCO NORMATIVO</h3>
+        <div class="article">
+            <p><span class="article-title">Artículo 68.</span> DEFINICIÓN DE ACOSO LABORAL</p>
             <p>En DISTRILAN SAS entendemos por acoso laboral toda conducta persistente y demostrable, ejercida sobre un trabajador, un jefe o superior jerárquico inmediato o mediato, un compañero de trabajo o un subalterno, encaminada a infundir miedo, intimidación, terror y angustia, a causar perjuicio laboral, generar desmotivación en el trabajo, o inducir la renuncia del mismo.</p>
             <p><strong>ÁMBITO DE APLICACIÓN</strong></p>
-            <ul>
-                <li><strong>Relaciones de dependencia:</strong> En nuestra empresa aplicaremos la ley de acoso laboral únicamente respecto de situaciones que ocurran en un ámbito de relaciones de dependencia o subordinación de carácter laboral.</li>
-                <li><strong>Exclusiones:</strong> No se aplicará en el ámbito de las relaciones civiles y/o comerciales derivadas de los contratos de prestación de servicios en los cuales no se presenta una relación de jerarquía o subordinación, ni en la contratación administrativa.</li>
-            </ul>
+            <p><strong>Relaciones de dependencia:</strong> En nuestra empresa aplicaremos la ley de acoso laboral únicamente respecto de situaciones que ocurran en un ámbito de relaciones de dependencia o subordinación de carácter laboral.</p>
+            <p><strong>Exclusiones:</strong> No se aplicará en el ámbito de las relaciones civiles y/o comerciales derivadas de los contratos de prestación de servicios en los cuales no se presenta una relación de jerarquía o subordinación, ni en la contratación administrativa.</p>
             <p><strong>MARCO NORMATIVO APLICABLE</strong></p>
             <ul>
                 <li>Ley 1010 de 2006: Por medio de la cual se adoptan medidas para prevenir, corregir y sancionar el acoso laboral y otros hostigamientos en el marco de las relaciones de trabajo.</li>
@@ -194,38 +841,37 @@
             </ul>
         </div>
 
-        <h4>MODALIDADES DE ACOSO LABORAL</h4>
-        <div class="articulo">
-            <strong>Artículo 69.</strong> En DISTRILAN SAS reconocemos las siguientes modalidades de acoso laboral:
+        <div class="article">
+            <p><span class="article-title">Artículo 69.</span> MODALIDADES DE ACOSO LABORAL</p>
+            <p>En DISTRILAN SAS reconocemos las siguientes modalidades de acoso laboral:</p>
             <ol>
                 <li><strong>MALTRATO LABORAL</strong>
-                    <p>Definición: Todo acto de violencia contra la integridad física o moral, la libertad física o sexual y los bienes de quien se desempeñe como trabajador en nuestra empresa.</p>
-                    <p>Manifestaciones: - Expresiones verbales injuriosas o ultrajantes que lesionen la integridad moral - Ataques a los derechos a la intimidad y al buen nombre - Comportamientos tendientes a menoscabar la autoestima y la dignidad</p>
+                    <p><strong>Definición:</strong> Todo acto de violencia contra la integridad física o moral, la libertad física o sexual y los bienes de quien se desempeñe como trabajador en nuestra empresa.</p>
+                    <p><strong>Manifestaciones:</strong> - Expresiones verbales injuriosas o ultrajantes que lesionen la integridad moral - Ataques a los derechos a la intimidad y al buen nombre - Comportamientos tendientes a menoscabar la autoestima y la dignidad</p>
                 </li>
                 <li><strong>PERSECUCIÓN LABORAL</strong>
-                    <p>Definición: Toda conducta cuyas características de reiteración o evidente arbitrariedad permitan inferir el propósito de inducir la renuncia del trabajador.</p>
-                    <p>Manifestaciones: - Descalificación sistemática del trabajador - Carga excesiva de trabajo sin justificación objetiva - Cambios permanentes de horario que produzcan desmotivación laboral</p>
+                    <p><strong>Definición:</strong> Toda conducta cuyas características de reiteración o evidente arbitrariedad permitan inferir el propósito de inducir la renuncia del trabajador.</p>
+                    <p><strong>Manifestaciones:</strong> - Descalificación sistemática del trabajador - Carga excesiva de trabajo sin justificación objetiva - Cambios permanentes de horario que produzcan desmotivación laboral</p>
                 </li>
                 <li><strong>DISCRIMINACIÓN LABORAL</strong>
-                    <p>Definición: Todo trato diferenciado por razones que carezcan de razonabilidad desde el punto de vista laboral.</p>
-                    <p>Criterios prohibidos de discriminación: - Raza, género, origen familiar o nacional - Credo religioso, preferencia política - Situación social, orientación sexual - Identidad de género, edad, discapacidad</p>
+                    <p><strong>Definición:</strong> Todo trato diferenciado por razones que carezcan de razonabilidad desde el punto de vista laboral.</p>
+                    <p><strong>Criterios prohibidos de discriminación:</strong> - Raza, género, origen familiar o nacional - Credo religioso, preferencia política - Situación social, orientación sexual - Identidad de género, edad, discapacidad</p>
                 </li>
                 <li><strong>ENTORPECIMIENTO LABORAL</strong>
-                    <p>Definición: Toda acción tendiente a obstaculizar el cumplimiento de la labor o hacerla más gravosa o retardarla con perjuicio para el trabajador.</p>
-                    <p>Manifestaciones: - Privación, ocultación o inutilización de insumos, documentos o instrumentos - Destrucción o pérdida de información - Ocultamiento de correspondencia o mensajes electrónicos</p>
+                    <p><strong>Definición:</strong> Toda acción tendiente a obstaculizar el cumplimiento de la labor o hacerla más gravosa o retardarla con perjuicio para el trabajador.</p>
+                    <p><strong>Manifestaciones:</strong> - Privación, ocultación o inutilización de insumos, documentos o instrumentos - Destrucción o pérdida de información - Ocultamiento de correspondencia o mensajes electrónicos</p>
                 </li>
                 <li><strong>INEQUIDAD LABORAL</strong>
-                    <p>Definición: Asignación de funciones a menosprecio del trabajador, sin consideración a su perfil profesional o experiencia.</p>
+                    <p><strong>Definición:</strong> Asignación de funciones a menosprecio del trabajador, sin consideración a su perfil profesional o experiencia.</p>
                 </li>
                 <li><strong>DESPROTECCIÓN LABORAL</strong>
-                    <p>Definición: Toda conducta tendiente a poner en riesgo la integridad y la seguridad del trabajador mediante órdenes o asignación de funciones sin el cumplimiento de los requisitos mínimos de protección y seguridad.</p>
+                    <p><strong>Definición:</strong> Toda conducta tendiente a poner en riesgo la integridad y la seguridad del trabajador mediante órdenes o asignación de funciones sin el cumplimiento de los requisitos mínimos de protección y seguridad.</p>
                 </li>
             </ol>
         </div>
 
-        <h4>CIRCUNSTANCIAS ATENUANTES Y AGRAVANTES</h4>
-        <div class="articulo">
-            <strong>Artículo 70.</strong> CONDUCTAS ATENUANTES
+        <div class="article">
+            <p><span class="article-title">Artículo 70.</span> CIRCUNSTANCIAS ATENUANTES</p>
             <p>En DISTRILAN SAS consideramos como conductas atenuantes del acoso laboral:</p>
             <p><strong>ATENUANTES PERSONALES</strong></p>
             <ul>
@@ -242,9 +888,8 @@
                 <li>Circunstancias análogas: Cualquier circunstancia de análoga significación a las anteriores.</li>
             </ul>
             <p><strong>PARÁGRAFO:</strong> El estado de emoción o pasión excusable no se tendrá en cuenta en el caso de violencia contra la libertad sexual.</p>
-        </div>
-        <div class="articulo">
-            <strong>Artículo 71.</strong> CIRCUNSTANCIAS AGRAVANTES
+
+            <p><span class="article-title">Artículo 71.</span> CIRCUNSTANCIAS AGRAVANTES</p>
             <p>En DISTRILAN SAS consideramos como circunstancias agravantes del acoso laboral:</p>
             <p><strong>AGRAVANTES POR REITERACIÓN</strong></p>
             <ul>
@@ -268,9 +913,9 @@
             </ul>
         </div>
 
-        <h4>CONDUCTAS QUE CONSTITUYEN ACOSO LABORAL</h4>
-        <div class="articulo">
-            <strong>Artículo 72.</strong> En DISTRILAN SAS presumiremos que hay acoso laboral si se acredita la ocurrencia repetida y pública de cualquiera de las siguientes conductas:
+        <div class="article">
+            <p><span class="article-title">Artículo 72.</span> CONDUCTAS QUE CONSTITUYEN ACOSO LABORAL</p>
+            <p>En DISTRILAN SAS presumiremos que hay acoso laboral si se acredita la ocurrencia repetida y pública de cualquiera de las siguientes conductas:</p>
             <p><strong>AGRESIONES FÍSICAS Y VERBALES</strong></p>
             <ul>
                 <li>Actos de agresión física: Sin importar sus consecuencias.</li>
@@ -317,9 +962,9 @@
             <p><strong>PARÁGRAFO:</strong> En las demás situaciones, la autoridad competente determinará si constituyen o no acoso laboral.</p>
         </div>
 
-        <h4>CONDUCTAS QUE NO CONSTITUYEN ACOSO LABORAL</h4>
-        <div class="articulo">
-            <strong>Artículo 73.</strong> En DISTRILAN SAS establecemos que NO constituyen acoso laboral bajo ninguna de sus modalidades:
+        <div class="article">
+            <p><span class="article-title">Artículo 73.</span> CONDUCTAS QUE NO CONSTITUYEN ACOSO LABORAL</p>
+            <p>En DISTRILAN SAS establecemos que NO constituyen acoso laboral bajo ninguna de sus modalidades:</p>
             <p><strong>EJERCICIO DE AUTORIDAD</strong></p>
             <ul>
                 <li>Potestad disciplinaria: Los actos destinados a ejercer potestad disciplinaria que legalmente corresponde a los superiores jerárquicos sobre sus subalternos.</li>
@@ -344,20 +989,17 @@
             </ul>
         </div>
 
-        <h4>2. CONFORMACIÓN Y FUNCIONAMIENTO DE LOS COMITÉS DE CONVIVENCIA LABORAL</h4>
-        <div class="articulo">
-            <strong>Artículo 74.</strong> OBJETO Y NATURALEZA DEL COMITÉ
+        <h3>2. CONFORMACIÓN Y FUNCIONAMIENTO DE LOS COMITÉS DE CONVIVENCIA LABORAL</h3>
+        <div class="article">
+            <p><span class="article-title">Artículo 74.</span> OBJETO Y NATURALEZA DEL COMITÉ</p>
             <p>En DISTRILAN SAS, de conformidad con la Ley 1010 de 2006, la Resolución 3461 de 2025 y las demás normas concordantes, establecemos el Comité de Convivencia Laboral como una medida preventiva del acoso laboral que contribuye a proteger a nuestros trabajadores contra los riesgos psicosociales que afectan la salud en los lugares de trabajo.</p>
             <p><strong>CARACTERÍSTICAS DEL COMITÉ</strong></p>
-            <p><strong>Artículo 75.</strong> Nuestro Comité es una instancia con un rol preventivo, orientador, conciliador y canalizador. Su objetivo principal es promover un excelente ambiente de convivencia, fomentar relaciones sociales positivas y respaldar la dignidad e integridad de las personas en el trabajo.</p>
-            <p><strong>Artículo 76.</strong> En ningún caso, nuestro Comité tendrá la competencia para determinar o declarar la existencia de una conducta de acoso laboral, pues su función no es de carácter sancionatorio ni judicial.</p>
+            <p><span class="article-title">Artículo 75.</span> Nuestro Comité es una instancia con un rol preventivo, orientador, conciliador y canalizador. Su objetivo principal es promover un excelente ambiente de convivencia, fomentar relaciones sociales positivas y respaldar la dignidad e integridad de las personas en el trabajo.</p>
+            <p><span class="article-title">Artículo 76.</span> En ningún caso, nuestro Comité tendrá la competencia para determinar o declarar la existencia de una conducta de acoso laboral, pues su función no es de carácter sancionatorio ni judicial.</p>
             <p><strong>ÁMBITO DE APLICACIÓN</strong></p>
-            <p><strong>Artículo 77.</strong> Las disposiciones de este capítulo se aplican en DISTRILAN SAS a todos nuestros trabajadores dependientes, sin importar su modalidad contractual. Así mismo, cobijan a contratistas, trabajadores en misión de empresas de servicios temporales, aprendices, pasantes y practicantes, y en general, a toda persona que preste un servicio o desarrolle actividades en nuestras instalaciones.</p>
-        </div>
-
-        <h4>CONFORMACIÓN DEL COMITÉ</h4>
-        <div class="articulo">
-            <strong>Artículo 78.</strong> En DISTRILAN SAS nuestro Comité de Convivencia Laboral estará compuesto por un número igual de representantes del empleador y de los trabajadores, con sus respectivos suplentes, de la siguiente manera:
+            <p><span class="article-title">Artículo 77.</span> Las disposiciones de este capítulo se aplican en DISTRILAN SAS a todos nuestros trabajadores dependientes, sin importar su modalidad contractual. Así mismo, cobijan a contratistas, trabajadores en misión de empresas de servicios temporales, aprendices, pasantes y practicantes, y en general, a toda persona que preste un servicio o desarrolle actividades en nuestras instalaciones.</p>
+            <p><strong>CONFORMACIÓN DEL COMITÉ</strong></p>
+            <p><span class="article-title">Artículo 78.</span> En DISTRILAN SAS nuestro Comité de Convivencia Laboral estará compuesto por un número igual de representantes del empleador y de los trabajadores, con sus respectivos suplentes, de la siguiente manera:</p>
             <p><strong>COMPOSICIÓN SEGÚN NÚMERO DE TRABAJADORES</strong></p>
             <ul>
                 <li>Empresas con menos de cinco (5) trabajadores: El Comité estará conformado por un (1) representante de los trabajadores y uno (1) del empleador.</li>
@@ -365,77 +1007,68 @@
                 <li>Empresas con más de veinte (20) trabajadores: El Comité estará conformado por cuatro (4) integrantes: dos (2) representantes de los trabajadores y dos (2) del empleador, con sus respectivos suplentes.</li>
             </ul>
         </div>
-        <div class="articulo">
-            <strong>Artículo 79.</strong> La conformación de nuestro Comité se realizará de la siguiente manera:
+
+        <div class="article">
+            <p><span class="article-title">Artículo 79.</span> La conformación de nuestro Comité se realizará de la siguiente manera:</p>
             <p><strong>REPRESENTANTES DEL EMPLEADOR</strong></p>
-            <ul>
-                <li>Designación directa: Los representantes del empleador serán designados directamente por la alta dirección de DISTRILAN SAS.</li>
-            </ul>
+            <p><strong>Designación directa:</strong> Los representantes del empleador serán designados directamente por la alta dirección de DISTRILAN SAS.</p>
             <p><strong>REPRESENTANTES DE LOS TRABAJADORES</strong></p>
-            <ul>
-                <li>Elección democrática: Los representantes de los trabajadores serán elegidos mediante votación secreta, libre y espontánea por todos nuestros trabajadores, a través de un proceso de escrutinio público convocado para tal fin.</li>
-            </ul>
+            <p><strong>Elección democrática:</strong> Los representantes de los trabajadores serán elegidos mediante votación secreta, libre y espontánea por todos nuestros trabajadores, a través de un proceso de escrutinio público convocado para tal fin.</p>
             <p><strong>COMPETENCIAS REQUERIDAS</strong></p>
-            <ul>
-                <li>Perfil de los miembros: Los miembros de nuestro Comité deberán contar con competencias como respeto, imparcialidad, confidencialidad, comunicación asertiva y resolución de conflictos.</li>
-            </ul>
-        </div>
-        <div class="articulo">
-            <strong>Artículo 80.</strong> INHABILIDADES
-            <p>En DISTRILAN SAS no podrán ser elegidos o designados como miembros del Comité aquellos trabajadores a quienes se les haya formulado una queja de acoso laboral, o que hayan sido víctimas de acoso laboral, en el año inmediatamente anterior a la fecha de conformación del Comité.</p>
-        </div>
-        <div class="articulo">
-            <strong>Artículo 81.</strong> PERÍODO Y TRANSICIÓN
-            <p>El período de vigencia de los miembros de nuestro Comité de Convivencia Laboral será de dos (2) años, contados a partir de la fecha de comunicación de su elección y/o designación. Al finalizar su período, el Comité saliente deberá entregar toda la documentación y archivos bajo su custodia al nuevo Comité, garantizando en todo momento la continuidad de la gestión y la reserva de la información.</p>
+            <p><strong>Perfil de los miembros:</strong> Los miembros de nuestro Comité deberán contar con competencias como respeto, imparcialidad, confidencialidad, comunicación asertiva y resolución de conflictos.</p>
+            <p><strong>INHABILIDADES</strong></p>
+            <p><span class="article-title">Artículo 80.</span> En DISTRILAN SAS no podrán ser elegidos o designados como miembros del Comité aquellos trabajadores a quienes se les haya formulado una queja de acoso laboral, o que hayan sido víctimas de acoso laboral, en el año inmediatamente anterior a la fecha de conformación del Comité.</p>
+            <p><strong>PERÍODO Y TRANSICIÓN</strong></p>
+            <p><span class="article-title">Artículo 81.</span> El período de vigencia de los miembros de nuestro Comité de Convivencia Laboral será de dos (2) años, contados a partir de la fecha de comunicación de su elección y/o designación. Al finalizar su período, el Comité saliente deberá entregar toda la documentación y archivos bajo su custodia al nuevo Comité, garantizando en todo momento la continuidad de la gestión y la reserva de la información.</p>
         </div>
 
-        <h4>FUNCIONES Y PROCEDIMIENTO DEL COMITÉ</h4>
-        <div class="articulo">
-            <strong>Artículo 82.</strong> En DISTRILAN SAS nuestro Comité ejercerá sus funciones con base en los principios de celeridad, eficacia, imparcialidad y confidencialidad. El procedimiento preventivo no podrá exceder los sesenta y cinco (65) días calendario desde la recepción de la queja, y los plazos no son acumulativos.
+        <div class="article">
+            <p><span class="article-title">Artículo 82.</span> FUNCIONES Y PROCEDIMIENTO DEL COMITÉ</p>
+            <p>En DISTRILAN SAS nuestro Comité ejercerá sus funciones con base en los principios de celeridad, eficacia, imparcialidad y confidencialidad. El procedimiento preventivo no podrá exceder los sesenta y cinco (65) días calendario desde la recepción de la queja, y los plazos no son acumulativos.</p>
             <p><strong>ETAPAS DEL PROCEDIMIENTO</strong></p>
             <ol>
                 <li><strong>RECEPCIÓN Y TRÁMITE DE LA QUEJA</strong>
-                    <p>Término: Recibiremos y daremos trámite a las quejas que describan situaciones de presunto acoso laboral en un término de cinco (5) días calendario.</p>
+                    <p><strong>Término:</strong> Recibiremos y daremos trámite a las quejas que describan situaciones de presunto acoso laboral en un término de cinco (5) días calendario.</p>
                 </li>
                 <li><strong>ANÁLISIS CONFIDENCIAL</strong>
-                    <p>Término: Examinaremos el caso en un término de cinco (5) días calendario, prorrogables por diez (10) días más con justificación escrita.</p>
+                    <p><strong>Término:</strong> Examinaremos el caso en un término de cinco (5) días calendario, prorrogables por diez (10) días más con justificación escrita.</p>
                 </li>
                 <li><strong>AUDIENCIAS INDIVIDUALES</strong>
-                    <p>Término: Escucharemos a las partes involucradas de manera individual dentro de los cinco (5) días calendario siguientes.</p>
+                    <p><strong>Término:</strong> Escucharemos a las partes involucradas de manera individual dentro de los cinco (5) días calendario siguientes.</p>
                 </li>
                 <li><strong>ESPACIO DE DIÁLOGO Y ACUERDOS</strong>
-                    <p>Término: Crearemos un espacio de diálogo entre las partes para promover compromisos mutuos y formular un plan de mejora. Esta etapa se realizará dentro de los cinco (5) días calendario posteriores a las audiencias individuales, con posibilidad de prórroga de diez (10) días.</p>
+                    <p><strong>Término:</strong> Crearemos un espacio de diálogo entre las partes para promover compromisos mutuos y formular un plan de mejora. Esta etapa se realizará dentro de los cinco (5) días calendario posteriores a las audiencias individuales, con posibilidad de prórroga de diez (10) días.</p>
                 </li>
                 <li><strong>SEGUIMIENTO A COMPROMISOS</strong>
-                    <p>Periodicidad: Realizaremos seguimiento mensual al cumplimiento de los acuerdos pactados.</p>
+                    <p><strong>Periodicidad:</strong> Realizaremos seguimiento mensual al cumplimiento de los acuerdos pactados.</p>
                 </li>
                 <li><strong>CIERRE O REMISIÓN</strong>
-                    <p>Término: Si no se llega a un acuerdo, se incumplen las recomendaciones o la conducta persiste, nuestro Comité informará a la alta dirección de DISTRILAN SAS, cerrará el caso y el trabajador quedará en libertad de acudir ante el Inspector de Trabajo o el juez competente. Esta remisión la haremos máximo en los quince (15) días calendario siguientes a la verificación del incumplimiento.</p>
+                    <p><strong>Término:</strong> Si no se llega a un acuerdo, se incumplen las recomendaciones o la conducta persiste, nuestro Comité informará a la alta dirección de DISTRILAN SAS, cerrará el caso y el trabajador quedará en libertad de acudir ante el Inspector de Trabajo o el juez competente. Esta remisión la haremos máximo en los quince (15) días calendario siguientes a la verificación del incumplimiento.</p>
                 </li>
                 <li><strong>RECOMENDACIONES A LA ALTA DIRECCIÓN</strong>
-                    <p>Término: Presentaremos a la alta dirección recomendaciones para el desarrollo de medidas preventivas y correctivas entre cinco (5) y diez (10) días calendario.</p>
+                    <p><strong>Término:</strong> Presentaremos a la alta dirección recomendaciones para el desarrollo de medidas preventivas y correctivas entre cinco (5) y diez (10) días calendario.</p>
                 </li>
                 <li><strong>INFORMES DE GESTIÓN</strong>
-                    <p>Periodicidad: Elaboraremos informes trimestrales y un informe anual de gestión para la alta dirección de DISTRILAN SAS.</p>
+                    <p><strong>Periodicidad:</strong> Elaboraremos informes trimestrales y un informe anual de gestión para la alta dirección de DISTRILAN SAS.</p>
                 </li>
             </ol>
         </div>
-        <div class="articulo">
-            <strong>Artículo 83.</strong> FUNCIONAMIENTO DEL COMITÉ
+
+        <div class="article">
+            <p><span class="article-title">Artículo 83.</span> FUNCIONAMIENTO DEL COMITÉ</p>
             <p><strong>REUNIONES DEL COMITÉ</strong></p>
+            <p>En DISTRILAN SAS nuestro Comité de Convivencia Laboral sesionará de la siguiente manera:</p>
+            <p><strong>REUNIONES ORDINARIAS</strong></p>
             <ul>
-                <li><strong>REUNIONES ORDINARIAS</strong>
-                    <p>Periodicidad: Se realizarán de forma mensual para actividades administrativas, seguimiento y planeación.</p>
-                    <p>Quórum: Sesionará con la mitad más uno de sus integrantes.</p>
-                </li>
-                <li><strong>REUNIONES EXTRAORDINARIAS</strong>
-                    <p>Convocatoria: Se convocarán por la secretaría técnica cada vez que se reciba una queja para dar inicio al procedimiento preventivo.</p>
-                </li>
+                <li><strong>Periodicidad:</strong> Se realizarán de forma mensual para actividades administrativas, seguimiento y planeación.</li>
+                <li><strong>Quórum:</strong> Sesionará con la mitad más uno de sus integrantes.</li>
             </ul>
-        </div>
-        <div class="articulo">
-            <strong>Artículo 84.</strong> PRESIDENCIA Y SECRETARÍA DEL COMITÉ
-            <p>Nuestro Comité elegirá por mutuo acuerdo un presidente y un secretario, con las siguientes funciones:</p>
+            <p><strong>REUNIONES EXTRAORDINARIAS</strong></p>
+            <ul>
+                <li><strong>Convocatoria:</strong> Se convocarán por la secretaría técnica cada vez que se reciba una queja para dar inicio al procedimiento preventivo.</li>
+            </ul>
+            <p><strong>PRESIDENCIA Y SECRETARÍA DEL COMITÉ</strong></p>
+            <p><span class="article-title">Artículo 84.</span> Nuestro Comité elegirá por mutuo acuerdo un presidente y un secretario, con las siguientes funciones:</p>
             <p><strong>FUNCIONES DE LA PRESIDENCIA</strong></p>
             <ul>
                 <li>Convocatoria: Convocar y presidir las reuniones del Comité.</li>
@@ -453,64 +1086,60 @@
             </ul>
             <p><strong>PARÁGRAFO:</strong> El rol de secretaría podrá ser rotado entre los miembros del Comité, previo acuerdo formalizado en acta.</p>
         </div>
-        <div class="articulo">
-            <strong>Artículo 85.</strong> CONFIDENCIALIDAD Y RESERVA
+
+        <div class="article">
+            <p><span class="article-title">Artículo 85.</span> CONFIDENCIALIDAD Y RESERVA</p>
             <p>En DISTRILAN SAS toda la información, quejas, documentos y actuaciones gestionadas por nuestro Comité son de carácter estrictamente confidencial y reservado. Los miembros del Comité suscribirán un acuerdo de confidencialidad. El incumplimiento de esta obligación constituirá una falta grave a las obligaciones del contrato de trabajo y al presente reglamento, y dará lugar a las sanciones disciplinarias correspondientes.</p>
         </div>
-        <div class="articulo">
-            <strong>Artículo 86.</strong> CASOS DE ACOSO SEXUAL Y VIOLENCIA DE GÉNERO
+
+        <div class="article">
+            <p><span class="article-title">Artículo 86.</span> CASOS DE ACOSO SEXUAL Y VIOLENCIA DE GÉNERO</p>
             <p>Conforme a la Ley 2365 de 2024, en DISTRILAN SAS las conductas de acoso sexual o violencia por razones de género no son conciliables y, por tanto, están expresamente excluidas de la competencia del Comité de Convivencia Laboral.</p>
-            <p><strong>Artículo 87.</strong> En DISTRILAN SAS, a través del área de Talento Humano y la alta dirección, hemos establecido un procedimiento interno específico para recibir estas quejas, activar la ruta de atención, y adoptar las medidas de prevención, protección y soporte necesarias, garantizando la confidencialidad y la no revictimización de la persona afectada.</p>
+            <p><span class="article-title">Artículo 87.</span> En DISTRILAN SAS, a través del área de Talento Humano y la alta dirección, hemos establecido un procedimiento interno específico para recibir estas quejas, activar la ruta de atención, y adoptar las medidas de prevención, protección y soporte necesarias, garantizando la confidencialidad y la no revictimización de la persona afectada.</p>
         </div>
-        <div class="articulo">
-            <strong>Artículo 88.</strong> RESPONSABILIDADES DE LA EMPRESA
+
+        <div class="article">
+            <p><span class="article-title">Artículo 88.</span> RESPONSABILIDADES DE LA EMPRESA</p>
             <p>En DISTRILAN SAS nos comprometemos a desarrollar las siguientes medidas preventivas y correctivas:</p>
-            <ol>
-                <li><strong>PREVENCIÓN</strong>
-                    <ul>
-                        <li>Política clara: Formularemos y divulgaremos una política clara de prevención del acoso laboral.</li>
-                        <li>Manuales: Elaboraremos manuales de convivencia apropiados para nuestra actividad.</li>
-                        <li>Capacitaciones: Realizaremos capacitaciones periódicas en resolución de conflictos, comunicación asertiva y prevención de la violencia y discriminación con enfoque de género.</li>
-                    </ul>
-                </li>
-                <li><strong>CORRECCIÓN</strong>
-                    <ul>
-                        <li>Intervención: Implementaremos acciones de intervención sobre factores de riesgo psicosocial.</li>
-                        <li>Traslados: Facilitaremos el traslado de trabajadores cuando sea médicamente recomendado.</li>
-                        <li>Atención: Disponemos de un espacio de atención o canal de ayuda para brindar primeros auxilios psicológicos.</li>
-                    </ul>
-                </li>
-                <li><strong>APOYO AL COMITÉ</strong>
-                    <ul>
-                        <li>Recursos: Garantizaremos los recursos físicos, técnicos y de tiempo para el correcto funcionamiento del Comité.</li>
-                        <li>Recomendaciones: Atenderemos las recomendaciones del Comité de manera oportuna.</li>
-                    </ul>
-                </li>
-                <li><strong>ARTICULACIÓN CON LA ARL</strong>
-                    <ul>
-                        <li>Coordinación: Coordinaremos con la Administradora de Riesgos Laborales (ARL) acciones de asesoría, capacitación y promoción de la salud mental para todos nuestros trabajadores y miembros del Comité.</li>
-                    </ul>
-                </li>
-            </ol>
-        </div>
-
-        <h4>3. POLÍTICA DE INCLUSIÓN LABORAL Y AJUSTES RAZONABLES</h4>
-        <div class="articulo">
-            <strong>Artículo 89.</strong> En DISTRILAN SAS nos comprometemos con la creación de un entorno laboral inclusivo y equitativo para todas las personas, independientemente de su orientación sexual o identidad de género. Reconocemos la importancia de garantizar la igualdad de oportunidades y el pleno goce de los derechos.
-            <p><strong>COMPROMISOS DE INCLUSIÓN</strong></p>
+            <p><strong>1. PREVENCIÓN</strong></p>
             <ul>
-                <li>Ajustes razonables: Implementaremos ajustes razonables en el lugar de trabajo. Estos ajustes son las modificaciones o adaptaciones necesarias y adecuadas que no imponen una carga desproporcionada o indebida, con el fin de garantizar a las personas con discapacidad el ejercicio de sus derechos en igualdad de condiciones con las demás.</li>
-                <li>Diálogo permanente: Fomentaremos un diálogo abierto y permanente con nuestros trabajadores para identificar y remover las barreras actitudinales, comunicativas y físicas que puedan existir en nuestro entorno laboral.</li>
-                <li>Capacitaciones: Realizaremos capacitaciones periódicas para todo el personal sobre la importancia de la diversidad y la inclusión, promoviendo el respeto y la eliminación de estereotipos y prejuicios.</li>
-                <li>Prohibición de discriminación: En DISTRILAN SAS prohibimos expresamente cualquier forma de discriminación o acoso laboral basado en la orientación sexual, identidad de género o expresión de género. Esto incluye, pero no se limita a, insultos, bromas ofensivas, comentarios despectivos, gestos, miradas, insinuaciones o cualquier otro comportamiento que genere un ambiente hostil o intimidante.</li>
+                <li>Política clara: Formularemos y divulgaremos una política clara de prevención del acoso laboral.</li>
+                <li>Manuales: Elaboraremos manuales de convivencia apropiados para nuestra actividad.</li>
+                <li>Capacitaciones: Realizaremos capacitaciones periódicas en resolución de conflictos, comunicación asertiva y prevención de la violencia y discriminación con enfoque de género.</li>
             </ul>
-            <p><strong>GARANTÍAS ESPECÍFICAS</strong></p>
-            <p><strong>PARÁGRAFO A:</strong> En DISTRILAN SAS garantizaremos la adopción de ajustes razonables en los procesos de selección, contratación, permanencia y promoción de trabajadores con discapacidad, de conformidad con la Ley 1618 de 2013 y la Ley 2466 de 2025. Promoveremos la inclusión laboral de jóvenes, mujeres víctimas de violencia intrafamiliar, migrantes regulares, víctimas del conflicto y poblaciones en territorios PDET y ZOMAC.</p>
+            <p><strong>2. CORRECCIÓN</strong></p>
+            <ul>
+                <li>Intervención: Implementaremos acciones de intervención sobre factores de riesgo psicosocial.</li>
+                <li>Traslados: Facilitaremos el traslado de trabajadores cuando sea médicamente recomendado.</li>
+                <li>Atención: Dispondremos de un espacio de atención o canal de ayuda para brindar primeros auxilios psicológicos.</li>
+            </ul>
+            <p><strong>3. APOYO AL COMITÉ</strong></p>
+            <ul>
+                <li>Recursos: Garantizaremos los recursos físicos, técnicos y de tiempo para el correcto funcionamiento del Comité.</li>
+                <li>Recomendaciones: Atenderemos las recomendaciones del Comité de manera oportuna.</li>
+            </ul>
+            <p><strong>4. ARTICULACIÓN CON LA ARL</strong></p>
+            <ul>
+                <li>Coordinación: Coordinaremos con la Administradora de Riesgos Laborales (ARL) acciones de asesoría, capacitación y promoción de la salud mental para todos nuestros trabajadores y miembros del Comité.</li>
+            </ul>
         </div>
 
-        <h4>POLÍTICA DE PREVENCIÓN DE ACOSO SEXUAL LABORAL</h4>
-        <div class="articulo">
-            <strong>Artículo 90.</strong> En DISTRILAN SAS nuestra política de acoso sexual busca asegurar un entorno laboral seguro y respetuoso, libre de acoso sexual, protegiendo a todos nuestros trabajadores.
+        <h3>3. POLÍTICA DE INCLUSIÓN LABORAL Y AJUSTES RAZONABLES</h3>
+        <div class="article">
+            <p><span class="article-title">Artículo 89.</span> En DISTRILAN SAS nos comprometemos con la creación de un entorno laboral inclusivo y equitativo para todas las personas, independientemente de su orientación sexual o identidad de género. Reconocemos la importancia de garantizar la igualdad de oportunidades y el pleno goce de los derechos.</p>
+            <p><strong>COMPROMISOS DE INCLUSIÓN</strong></p>
+            <p><strong>Ajustes razonables:</strong> Implementaremos ajustes razonables en el lugar de trabajo. Estos ajustes son las modificaciones o adaptaciones necesarias y adecuadas que no imponen una carga desproporcionada o indebida, con el fin de garantizar a las personas con discapacidad el ejercicio de sus derechos en igualdad de condiciones con las demás.</p>
+            <p><strong>Diálogo permanente:</strong> Fomentaremos un diálogo abierto y permanente con nuestros trabajadores para identificar y remover las barreras actitudinales, comunicativas y físicas que puedan existir en nuestro entorno laboral.</p>
+            <p><strong>Capacitaciones:</strong> Realizaremos capacitaciones periódicas para todo el personal sobre la importancia de la diversidad y la inclusión, promoviendo el respeto y la eliminación de estereotipos y prejuicios.</p>
+            <p><strong>Prohibición de discriminación:</strong> En DISTRILAN SAS prohibimos expresamente cualquier forma de discriminación o acoso laboral basado en la orientación sexual, identidad de género o expresión de género. Esto incluye, pero no se limita a, insultos, bromas ofensivas, comentarios despectivos, gestos, miradas, insinuaciones o cualquier otro comportamiento que genere un ambiente hostil o intimidante.</p>
+            <p><strong>GARANTÍAS ESPECÍFICAS</strong></p>
+            <p><strong>PARÁGRAFO A:</strong> En DISTRILAN SAS garantizaremos la adopción de ajustes razonables en los procesos de selección, contratación, permanencia y promoción de trabajadores con discapacidad, de conformidad con la Ley 1618 de 2013 y la Ley 2466 de 2025.</p>
+            <p>Promoveremos la inclusión laboral de jóvenes, mujeres víctimas de violencia intrafamiliar, migrantes regulares, víctimas del conflicto y poblaciones en territorios PDET y ZOMAC.</p>
+        </div>
+
+        <div class="article">
+            <p><span class="article-title">Artículo 90.</span> POLÍTICA DE PREVENCIÓN DE ACOSO SEXUAL LABORAL</p>
+            <p>En DISTRILAN SAS nuestra política de acoso sexual busca asegurar un entorno laboral seguro y respetuoso, libre de acoso sexual, protegiendo a todos nuestros trabajadores.</p>
             <p><strong>OBJETIVOS DE LA POLÍTICA</strong></p>
             <ul>
                 <li>Prevención: Prevenir el acoso mediante educación y promoción de una cultura de respeto.</li>
@@ -522,10 +1151,8 @@
             </ul>
             <p><strong>ÁMBITO DE APLICACIÓN</strong></p>
             <p>Esta política se aplica a todos los trabajadores de DISTRILAN SAS, personal administrativo, operativo y cualquier otro miembro del equipo. También se extiende a clientes, proveedores y cualquier persona que interactúe con nuestra empresa en un contexto laboral.</p>
-        </div>
-        <div class="articulo">
-            <strong>Artículo 91.</strong> DEFINICIÓN DE ACOSO SEXUAL
-            <p>De acuerdo con la Ley 2365 de 2024, en DISTRILAN SAS definimos el acoso sexual como todo acto de persecución, hostigamiento o asedio, de carácter o connotación sexual, lasciva o libidinosa, que se manifieste por relaciones de poder de orden vertical u horizontal, mediadas por la edad, el sexo, el género, orientación e identidad sexual, la posición laboral, social, o económica, que se dé una o varias veces en contra de otra persona en el contexto laboral.</p>
+            <p><strong>DEFINICIÓN DE ACOSO SEXUAL</strong></p>
+            <p><span class="article-title">Artículo 91.</span> De acuerdo con la Ley 2365 de 2024, en DISTRILAN SAS definimos el acoso sexual como todo acto de persecución, hostigamiento o asedio, de carácter o connotación sexual, lasciva o libidinosa, que se manifieste por relaciones de poder de orden vertical u horizontal, mediadas por la edad, el sexo, el género, orientación e identidad sexual, la posición laboral, social, o económica, que se dé una o varias veces en contra de otra persona en el contexto laboral.</p>
             <p><strong>MANIFESTACIONES DEL ACOSO SEXUAL</strong></p>
             <ul>
                 <li>Comentarios inapropiados: Comentarios, bromas o insinuaciones de carácter sexual.</li>
@@ -534,63 +1161,48 @@
                 <li>Material explícito: Exhibición de material sexualmente explícito.</li>
                 <li>Otras conductas: Cualquier otra conducta de carácter sexual que interfiera con el desempeño laboral o cree un ambiente de trabajo hostil.</li>
             </ul>
-        </div>
-        <div class="articulo">
-            <strong>Artículo 92.</strong> PROCEDIMIENTO DE DENUNCIA
-            <p>En DISTRILAN SAS los empleados que experimenten o sean testigos de acoso sexual deben presentar una denuncia de inmediato al Departamento de Recursos Humanos o a un supervisor de confianza. Las denuncias pueden hacerse de manera confidencial, y los empleados serán informados sobre la disponibilidad de asistencia y apoyo durante el proceso.</p>
-            <p><strong>Artículo 93.</strong> En DISTRILAN SAS garantizamos que no habrá represalias contra los empleados que presenten denuncias de buena fe o participen en investigaciones relacionadas con el acoso sexual.</p>
-            <p><strong>Artículo 94.</strong> Las quejas por presunto acoso sexual se tramitarán de acuerdo al procedimiento establecido en este reglamento interno, garantizando el debido proceso.</p>
-        </div>
-        <div class="articulo">
-            <strong>Artículo 95.</strong> SANCIONES DISCIPLINARIAS
-            <p>En DISTRILAN SAS, si se confirma que ha ocurrido acoso sexual, tomaremos medidas correctivas dependiendo de la gravedad del incidente que pueden incluir:</p>
+            <p><strong>PROCEDIMIENTO DE DENUNCIA</strong></p>
+            <p><span class="article-title">Artículo 92.</span> En DISTRILAN SAS los empleados que experimenten o sean testigos de acoso sexual deben presentar una denuncia de inmediato al Departamento de Recursos Humanos o a un supervisor de confianza. Las denuncias pueden hacerse de manera confidencial, y los empleados serán informados sobre la disponibilidad de asistencia y apoyo durante el proceso.</p>
+            <p><span class="article-title">Artículo 93.</span> En DISTRILAN SAS garantizamos que no habrá represalias contra los empleados que presenten denuncias de buena fe o participen en investigaciones relacionadas con el acoso sexual.</p>
+            <p><span class="article-title">Artículo 94.</span> Las quejas por presunto acoso sexual se tramitarán de acuerdo al procedimiento establecido en este reglamento interno, garantizando el debido proceso.</p>
+            <p><strong>DERECHOS Y GARANTÍAS</strong></p>
+            <p><strong>PARÁGRAFO 1:</strong> En DISTRILAN SAS garantizaremos los derechos de las víctimas de acoso sexual, incluyendo la verdad, la no revictimización, la confidencialidad, la atención integral en salud y la protección frente a retaliaciones. A su vez, respetaremos los derechos de las personas investigadas, como el debido proceso y la presunción de inocencia.</p>
+            <p><strong>PARÁGRAFO 2:</strong> En DISTRILAN SAS adoptaremos medidas de protección a las víctimas de acoso sexual, a su solicitud, en un término no superior a cinco (5) días hábiles. Estas medidas pueden incluir el traslado del área de trabajo, el permiso para realizar teletrabajo o la evitación de interacciones con la persona investigada.</p>
+            <p><strong>SANCIONES DISCIPLINARIAS</strong></p>
+            <p><span class="article-title">Artículo 95.</span> En DISTRILAN SAS, si se confirma que ha ocurrido acoso sexual, tomaremos medidas correctivas dependiendo de la gravedad del incidente que pueden incluir:</p>
             <ul>
                 <li>a) Sanción pedagógica: Capacitación especializada obligatoria.</li>
                 <li>b) Terminación del contrato: Dependiendo de la gravedad del incidente, conforme al artículo sobre faltas gravísimas.</li>
                 <li>c) Remisión a autoridades: Remitiremos de manera inmediata la queja y denuncia a la autoridad competente, a petición de la víctima respetando su derecho a la intimidad.</li>
                 <li>d) Conformidad legal: Las medidas disciplinarias y acciones correctivas serán tomadas en conformidad con la Ley 2365 de 2024 y cualquier otra normativa aplicable.</li>
             </ul>
-        </div>
-        <div class="articulo">
-            <strong>Artículo 96.</strong> OBLIGACIONES DEL EMPLEADOR
-            <p>En DISTRILAN SAS, como empleador, cumpliremos con las siguientes obligaciones para prevenir, investigar y sancionar el acoso sexual en el contexto laboral:</p>
-            <ol>
-                <li><strong>POLÍTICA INTERNA</strong>
-                    <p>Formularemos y divulgaremos una política interna de prevención del acoso sexual.</p>
-                </li>
-                <li><strong>PROTECCIÓN</strong>
-                    <p>Garantizaremos los derechos de las víctimas, y estableceremos mecanismos para atender, prevenir y brindar garantías de no repetición frente al acoso sexual dentro de nuestro ámbito de competencia.</p>
-                </li>
-                <li><strong>PROTECCIÓN INMEDIATA</strong>
-                    <p>Implementaremos las garantías de protección inmediata para evitar un daño irremediable dentro de nuestro ámbito de competencia.</p>
-                </li>
-                <li><strong>INFORMACIÓN A LA VÍCTIMA</strong>
-                    <p>Derechos: Informaremos a la víctima su facultad de acudir ante la Fiscalía General de la Nación.</p>
-                </li>
-                <li><strong>REMISIÓN A AUTORIDADES</strong>
-                    <p>Denuncia: Remitiremos de manera inmediata la queja y denuncia a la autoridad competente, a petición de la víctima respetando su derecho a la intimidad.</p>
-                </li>
-                <li><strong>NO CENSURA</strong>
-                    <p>Visibilización: Nos abstendremos de realizar actos de censura que desconozcan la garantía de las víctimas de visibilizar públicamente los actos de acoso sexual y nos abstendremos de ejecutar actos de revictimización.</p>
-                </li>
-                <li><strong>PUBLICACIÓN DE ESTADÍSTICAS</strong>
-                    <p>Transparencia: Publicaremos semestralmente el número de quejas tramitadas y sanciones impuestas, en los canales físicos y/o electrónicos que tengamos disponibles. Estas quejas y sanciones serán remitidas al Sistema Integrado de Información de Violencias de Género (SIVIGE) dentro de los últimos diez (10) días del respectivo semestre. Dicha publicación será anonimizada, para salvaguardar la intimidad, confidencialidad y debido proceso de las partes.</p>
-                </li>
-            </ol>
-        </div>
-        <div class="articulo">
-            <strong>Artículo 97.</strong> CAPACITACIÓN Y CONCIENTIZACIÓN
-            <p>En DISTRILAN SAS proporcionaremos capacitación regular a todos nuestros empleados sobre la política de acoso sexual y los procedimientos de denuncia, de acuerdo con los requisitos de la Ley 2365 de 2024. Esta capacitación estará diseñada para sensibilizar a los empleados sobre el acoso sexual y promover un entorno laboral respetuoso.</p>
-            <p><strong>Artículo 98.</strong> Esta política será revisada anualmente y actualizada según sea necesario para asegurar el cumplimiento continuo con la Ley 2365 de 2024 y las mejores prácticas en la prevención del acoso sexual.</p>
-            <p><strong>Artículo 99.</strong> Para cualquier pregunta o aclaración sobre esta política, nuestros empleados deben comunicarse con el Departamento de Recursos Humanos de DISTRILAN SAS.</p>
+            <p><strong>OBLIGACIONES DEL EMPLEADOR</strong></p>
+            <p><span class="article-title">Artículo 96.</span> En DISTRILAN SAS, como empleador, cumpliremos con las siguientes obligaciones para prevenir, investigar y sancionar el acoso sexual en el contexto laboral:</p>
+            <p><strong>1. POLÍTICA INTERNA</strong></p>
+            <p><strong>2. PROTECCIÓN</strong></p>
+            <p>Protección: Garantizaremos los derechos de las víctimas, y estableceremos mecanismos para atender, prevenir y brindar garantías de no repetición frente al acoso sexual dentro de nuestro ámbito de competencia.</p>
+            <p><strong>3. PROTECCIÓN INMEDIATA</strong></p>
+            <p>Medidas urgentes: Implementaremos las garantías de protección inmediata para evitar un daño irremediable dentro de nuestro ámbito de competencia.</p>
+            <p><strong>4. INFORMACIÓN A LA VÍCTIMA</strong></p>
+            <p>Derechos: Informaremos a la víctima su facultad de acudir ante la Fiscalía General de la Nación.</p>
+            <p><strong>5. REMISIÓN A AUTORIDADES</strong></p>
+            <p>Denuncia: Remitiremos de manera inmediata la queja y denuncia a la autoridad competente, a petición de la víctima respetando su derecho a la intimidad.</p>
+            <p><strong>6. NO CENSURA</strong></p>
+            <p>Visibilización: Nos abstendremos de realizar actos de censura que desconozcan la garantía de las víctimas de visibilizar públicamente los actos de acoso sexual y nos abstendremos de ejecutar actos de revictimización.</p>
+            <p><strong>7. PUBLICACIÓN DE ESTADÍSTICAS</strong></p>
+            <p>Transparencia: Publicaremos semestralmente el número de quejas tramitadas y sanciones impuestas, en los canales físicos y/o electrónicos que tengamos disponibles. Estas quejas y sanciones serán remitidas al Sistema Integrado de Información de Violencias de Género (SIVIGE) dentro de los últimos diez (10) días del respectivo semestre. Dicha publicación será anonimizada, para salvaguardar la intimidad, confidencialidad y debido proceso de las partes.</p>
+            <p><strong>CAPACITACIÓN Y CONCIENTIZACIÓN</strong></p>
+            <p><span class="article-title">Artículo 97.</span> En DISTRILAN SAS proporcionaremos capacitación regular a todos nuestros empleados sobre la política de acoso sexual y los procedimientos de denuncia, de acuerdo con los requisitos de la Ley 2365 de 2024. Esta capacitación estará diseñada para sensibilizar a los empleados sobre el acoso sexual y promover un entorno laboral respetuoso.</p>
+            <p><span class="article-title">Artículo 98.</span> Esta política será revisada anualmente y actualizada según sea necesario para asegurar el cumplimiento continuo con la Ley 2365 de 2024 y las mejores prácticas en la prevención del acoso sexual.</p>
+            <p><span class="article-title">Artículo 99.</span> Para cualquier pregunta o aclaración sobre esta política, nuestros empleados deben comunicarse con el Departamento de Recursos Humanos de DISTRILAN SAS.</p>
         </div>
 
-        <h4>POLÍTICA DE DESCONEXIÓN LABORAL</h4>
-        <div class="articulo">
-            <strong>1. OBJETO</strong>
-            <p>La presente política tiene por objeto garantizar el derecho a la desconexión laboral de los trabajadores de DISTRILAN SAS, en cumplimiento de lo establecido en la Ley 2191 de 2022 y demás normas concordantes, asegurando el respeto de los tiempos de descanso, licencias, vacaciones y vida personal y familiar de nuestros empleados, evitando cualquier tipo de contacto, requerimiento o instrucción fuera de la jornada laboral ordinaria, salvo en los casos expresamente excepcionados por la ley.</p>
+        <div class="section-title">POLÍTICA DE DESCONEXIÓN LABORAL</div>
+        <div class="article">
+            <p><strong>1. OBJETO</strong></p>
+            <p><span class="article-title">Artículo 100.</span> La presente política tiene por objeto garantizar el derecho a la desconexión laboral de los trabajadores de DISTRILAN SAS, en cumplimiento de lo establecido en la Ley 2191 de 2022 y demás normas concordantes, asegurando el respeto de los tiempos de descanso, licencias, vacaciones y vida personal y familiar de nuestros empleados, evitando cualquier tipo de contacto, requerimiento o instrucción fuera de la jornada laboral ordinaria, salvo en los casos expresamente excepcionados por la ley.</p>
             <p><strong>2. ÁMBITO DE APLICACIÓN</strong></p>
-            <p>La presente política aplica a todos los trabajadores vinculados con DISTRILAN SAS, independientemente de la modalidad de contratación, tipo de jornada o cargo desempeñado.</p>
+            <p><span class="article-title">Artículo 101.</span> La presente política aplica a todos los trabajadores vinculados con DISTRILAN SAS, independientemente de la modalidad de contratación, tipo de jornada o cargo desempeñado.</p>
             <p><strong>3. PRINCIPIOS</strong></p>
             <ul>
                 <li>Respeto al tiempo personal: Reconocemos el derecho de todo trabajador a no responder comunicaciones, instrucciones o requerimientos fuera de su jornada laboral.</li>
@@ -604,25 +1216,23 @@
                 <li>Disponibilidad especial: Cuando la naturaleza del cargo implique disponibilidad laboral (guardias, turnos de emergencia o situaciones extraordinarias), estas condiciones deberán estar definidas de manera clara en el contrato de trabajo y remuneradas conforme a la ley.</li>
             </ul>
             <p><strong>5. EXCEPCIONES</strong></p>
-            <p>En DISTRILAN SAS el derecho a la desconexión laboral podrá limitarse en las siguientes situaciones:</p>
+            <p><span class="article-title">Artículo 102.</span> En DISTRILAN SAS el derecho a la desconexión laboral podrá limitarse en las siguientes situaciones:</p>
             <ul>
                 <li>Fuerza mayor: Casos de fuerza mayor o circunstancias extraordinarias que exijan atención inmediata.</li>
                 <li>Cargos especiales: Cargos de dirección, confianza y manejo, en los cuales por su naturaleza se requiera disponibilidad laboral.</li>
                 <li>Acuerdos específicos: Acuerdos de disponibilidad pactados expresamente entre trabajador y empleador, conforme a la ley.</li>
             </ul>
             <p><strong>6. MECANISMOS DE REPORTE</strong></p>
-            <p>Los trabajadores que consideren vulnerado su derecho a la desconexión laboral podrán presentar queja o reporte ante el área de Talento Humano de DISTRILAN SAS, la cual deberá dar trámite oportuno y garantizar el respeto del derecho protegido.</p>
+            <p><span class="article-title">Artículo 103.</span> Los trabajadores que consideren vulnerado su derecho a la desconexión laboral podrán presentar queja o reporte ante el área de Talento Humano de DISTRILAN SAS, la cual deberá dar trámite oportuno y garantizar el respeto del derecho protegido.</p>
             <p><strong>7. VIGENCIA</strong></p>
-            <p>La presente política entra en vigencia a partir de su publicación y hace parte integral del Reglamento Interno de Trabajo de DISTRILAN SAS.</p>
+            <p><span class="article-title">Artículo 104.</span> La presente política entra en vigencia a partir de su publicación y hace parte integral del Reglamento Interno de Trabajo de DISTRILAN SAS.</p>
         </div>
 
-        <h2>CAPÍTULO XV</h2>
-        <h3>TERMINACIÓN DEL CONTRATO DE TRABAJO</h3>
-        <div class="articulo">
-            <strong>ARTÍCULO 100.</strong> CAUSALES DE TERMINACIÓN: El contrato de trabajo podrá terminar por cualquiera de las causales establecidas en los Artículos 61 y 62 del Código Sustantivo del Trabajo, así como por las justas causas adicionales expresamente pactadas en el contrato individual de trabajo y las faltas calificadas como gravísimas en el presente Reglamento Interno de Trabajo.
-        </div>
-        <div class="articulo">
-            <strong>ARTÍCULO 101.</strong> PROCEDIMIENTO PARA LA TERMINACIÓN POR RENDIMIENTO DEFICIENTE: Para la aplicación de la justa causa de terminación unilateral del contrato de trabajo por rendimiento deficiente (Art. 62, numeral 9 del Código Sustantivo del Trabajo), DISTRILAN SAS se ceñirá estrictamente al procedimiento establecido en el Artículo 2.2.1.1.3 del Decreto 1072 de 2015, el cual deberá surtirse antes de la aplicación de cualquier sanción o terminación contractual:
+        <div class="chapter-title">CAPÍTULO XV</div>
+        <div class="section-title">TERMINACIÓN DEL CONTRATO DE TRABAJO</div>
+        <div class="article">
+            <p><span class="article-title">ARTÍCULO 105.</span> CAUSALES DE TERMINACIÓN: El contrato de trabajo podrá terminar por cualquiera de las causales establecidas en los Artículos 61 y 62 del Código Sustantivo del Trabajo, así como por las justas causas adicionales expresamente pactadas en el contrato individual de trabajo y las faltas calificadas como gravísimas en el presente Reglamento Interno de Trabajo.</p>
+            <p><span class="article-title">ARTÍCULO 106.</span> PROCEDIMIENTO PARA LA TERMINACIÓN POR RENDIMIENTO DEFICIENTE: Para la aplicación de la justa causa de terminación unilateral del contrato de trabajo por rendimiento deficiente (Art. 62, numeral 9 del Código Sustantivo del Trabajo), DISTRILAN SAS se ceñirá estrictamente al procedimiento establecido en el Artículo 2.2.1.1.3 del Decreto 1072 de 2015, el cual deberá surtirse antes de la aplicación de cualquier sanción o terminación contractual:</p>
             <ul>
                 <li>Requerimiento Formal: Se requerirá al trabajador por escrito en dos (2) ocasiones, mediando entre uno y otro requerimiento un lapso no inferior a ocho (8) días calendario.</li>
                 <li>Cuadro Comparativo y Descargos: Si, a pesar de los requerimientos, persiste el deficiente rendimiento, se presentará al trabajador un cuadro comparativo de su rendimiento frente al promedio de rendimiento en actividades análogas, dándole un plazo de ocho (8) días para presentar sus descargos por escrito.</li>
@@ -630,16 +1240,12 @@
             </ul>
         </div>
 
-        <h2>CAPÍTULO XVI</h2>
-        <h3>PUBLICACIONES</h3>
-        <div class="articulo">
-            <strong>Artículo 102.</strong> En DISTRILAN SAS publicaremos en cartelera de nuestra empresa el Reglamento Interno de Trabajo y en la misma informaremos a nuestros trabajadores, mediante circular interna, del contenido de dicho reglamento, además lo tendremos disponible en medio digital para consulta a través de WhatsApp y link de consulta o mediante código QR.
-        </div>
-        <div class="articulo">
-            <strong>Artículo 103.</strong> La organización sindical, si la hubiere, y los trabajadores no sindicalizados, podrán solicitarnos dentro de los quince (15) días hábiles siguientes los ajustes que estimen necesarios cuando consideren que las cláusulas contravienen los artículos 106, 108, 111, 112 o 113 del Código Sustantivo del Trabajo.
-        </div>
-        <div class="articulo">
-            <strong>Artículo 104.</strong> CANALES OFICIALES DE COMUNICACIÓN Y VALIDEZ LEGAL DISTRILAN SAS establece los siguientes canales como medios oficiales de comunicación con sus trabajadores, diferenciando su uso según la naturaleza del mensaje:
+        <div class="chapter-title">CAPÍTULO XVI</div>
+        <div class="section-title">PUBLICACIONES</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 107.</span> En DISTRILAN SAS publicaremos en cartelera de nuestra empresa el Reglamento Interno de Trabajo y en la misma informaremos a nuestros trabajadores, mediante circular interna, del contenido de dicho reglamento, además lo tendremos disponible en medio digital para consulta a través de WhatsApp y link de consulta o mediante código QR.</p>
+            <p><span class="article-title">Artículo 108.</span> La organización sindical, si la hubiere, y los trabajadores no sindicalizados, podrán solicitarnos dentro de los quince (15) días hábiles siguientes los ajustes que estimen necesarios cuando consideren que las cláusulas contravienen los artículos 106, 108, 111, 112 o 113 del Código Sustantivo del Trabajo.</p>
+            <p><span class="article-title">Artículo 109.</span> CANALES OFICIALES DE COMUNICACIÓN Y VALIDEZ LEGAL DISTRILAN SAS establece los siguientes canales como medios oficiales de comunicación con sus trabajadores, diferenciando su uso según la naturaleza del mensaje:</p>
             <p><strong>1. Canales para Asuntos Laborales y Operacionales (Oficiales):</strong></p>
             <p>Para todas las comunicaciones de carácter netamente laboral, operacional, de Seguridad y Salud en el Trabajo, o cualquier otro que requiera trazabilidad y formalidad la empresa utilizará exclusivamente los siguientes medios:</p>
             <ul>
@@ -658,71 +1264,33 @@
             <p>De conformidad con la Ley 527 de 1999 (que define y regula el acceso y uso de los mensajes de datos), toda comunicación enviada por correo electrónico institucional o WhatsApp institucional se considera un Mensaje de Datos y goza de plena validez jurídica.</p>
             <p>Se presumirá que el trabajador ha recibido y conocido el contenido de la comunicación en la fecha y hora en que el mensaje haya ingresado al sistema de información designado por el trabajador (correo electrónico o aplicación de mensajería), siempre que la empresa pueda demostrar su envío, de acuerdo con los principios de la Ley 527 de 1999. El uso de estos medios se considera una aceptación de su validez para todos los efectos legales y contractuales.</p>
             <p><strong>Parágrafo Único:</strong> Es responsabilidad del trabajador mantener actualizados y revisar diligentemente sus canales de comunicación institucionales y personales registrados. La no revisión o la desactualización de estos datos no exime al trabajador de las consecuencias derivadas del contenido de las comunicaciones.</p>
-        </div>
-        <div class="articulo">
-            <strong>Artículo 105.</strong> En DISTRILAN SAS publicaremos el reglamento en el lugar de trabajo, mediante la fijación de dos (2) copias de caracteres legibles, en dos (2) sitios distintos. Si hubiere varios lugares de trabajo separados, la fijación se hará en cada uno de ellos, así como en medio electrónico para el cual los trabajadores contaran con una ruta de acceso.
+            <p><span class="article-title">Artículo 110.</span> En DISTRILAN SAS publicaremos el reglamento en el lugar de trabajo, mediante la fijación de dos (2) copias de caracteres legibles, en dos (2) sitios distintos. Si hubiere varios lugares de trabajo separados, la fijación se hará en cada uno de ellos, así como en medio electrónico para el cual los trabajadores contaran con una ruta de acceso.</p>
         </div>
 
-        <h2>CAPÍTULO XVII</h2>
-        <h3>VIGENCIA</h3>
-        <div class="articulo">
-            <strong>Artículo 106.</strong> El presente reglamento entrará a regir desde su publicación hecha en la forma prescrita en el artículo anterior de este Reglamento.
+        <div class="chapter-title">CAPÍTULO XVII</div>
+        <div class="section-title">VIGENCIA</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 111.</span> El presente reglamento entrará a regir desde su publicación hecha en la forma prescrita en el artículo anterior de este Reglamento.</p>
         </div>
 
-        <h2>CAPÍTULO XVII</h2>
-        <h3>DISPOSICIONES FINALES</h3>
-        <div class="articulo">
-            <strong>Artículo 107.</strong> Desde la fecha que entra en vigencia este reglamento, quedan sin efecto las disposiciones del Reglamento que antes de esta fecha haya tenido DISTRILAN SAS.
+        <div class="chapter-title">CAPÍTULO XVIII</div>
+        <div class="section-title">DISPOSICIONES FINALES</div>
+        <div class="article">
+            <p><span class="article-title">Artículo 112.</span> Desde la fecha que entra en vigencia este reglamento, quedan sin efecto las disposiciones del Reglamento que antes de esta fecha haya tenido DISTRILAN SAS.</p>
         </div>
 
-        <div class="firma">
-            <p>________________________________________</p>
+        <hr>
+
+        <div class="signature">
             <p>Pasto, noviembre de 2025</p>
-            <p><hr></p>
-            <p>GERMAN BOLAÑOS DELGADO</p>
+            <div>GERMAN BOLAÑOS DELGADO</div>
             <p>DISTRILAN SAS</p>
-            <p>________________________________________</p>
+        </div>
+
+        <div class="footer">
             <p>Documento elaborado conforme a la Ley 1010 de 2006, Ley 2365 de 2024, Ley 2191 de 2022, Ley 2466 de 2025, Código Sustantivo del Trabajo y demás normatividad laboral colombiana vigente</p>
         </div>
-
     </div>
 
-    <script>
-        document.getElementById('btn-aceptar').addEventListener('click', function() {
-            document.getElementById('aviso-legal').style.display = 'none';
-            document.getElementById('contenido').style.display = 'block';
-        });
-
-        // Bloqueo de clic derecho
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-
-        // Bloqueo de atajos de teclado (Ctrl+C, Ctrl+U, F12, etc.)
-        document.addEventListener('keydown', function(e) {
-            // F12
-            if (e.key === 'F12') {
-                e.preventDefault();
-            }
-            // Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U (para Windows/Linux)
-            if (e.ctrlKey && (e.shiftKey && (e.key === 'I' || e.key === 'J')) || e.ctrlKey && e.key === 'U') {
-                e.preventDefault();
-            }
-            // Cmd+Option+I, Cmd+Option+J, Cmd+U (para Mac)
-            if (e.metaKey && (e.altKey && (e.key === 'i' || e.key === 'j')) || e.metaKey && e.key === 'u') {
-                e.preventDefault();
-            }
-            // Ctrl+C o Cmd+C
-            if ((e.ctrlKey || e.metaKey) && e.key === 'c') {
-                e.preventDefault();
-            }
-            // Bloquear Print Screen (PrtScn) - No es 100% efectivo en todos los navegadores/OS, pero es un intento
-            if (e.key === 'PrintScreen' || e.key === 'Snapshot') {
-                // Esto solo previene la acción por defecto, pero no evita la captura a nivel de OS.
-                // Se deja como medida disuasoria.
-                // e.preventDefault(); 
-            }
-        });
-    </script>
 </body>
 </html>
